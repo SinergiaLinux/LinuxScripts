@@ -1,5 +1,7 @@
 Instalación de varios entornos de escritorio en Arch Linux
 
+![Texto descriptivo](ruta/de/la/imagen.png)
+
 gnome-sinergia.sh Este script instala el entorno de escritorio GNOME junto con una serie de paquetes útiles y extensiones para mejorar la experiencia en Arch Linux. Además, configura algunos parámetros del sistema como la habilitación de gdm (el gestor de sesiones) y la configuración de GRUB.
 Descripción
 
