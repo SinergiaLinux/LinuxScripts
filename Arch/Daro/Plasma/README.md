@@ -1,6 +1,6 @@
 Instalación de varios entornos de escritorio en Arch Linux
 
-![Plasma-Sinergia](https://raw.githubusercontent.com/SinergiaLinux/LinuxScripts/refs/heads/main/imagenes/Plasma-sinergia.png)
+![Plasma-Sinergia](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Plasma-sinergia.png)
 
 
 
