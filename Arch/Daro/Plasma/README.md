@@ -10,6 +10,8 @@ Chaotic-aur: repositorio binario precompilado de paquetes AUR populares. Se impo
 
 Yay viene preinstalado y "activado" por defecto.
 
+n resumen: es la versión funcional y liviana, pensada para quien quiere un Arch+Plasma operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque, sin el "maquillaje" visual de las otras dos variantes.
+
 
 
 **PLASMA FULL** (plasma-full.sh)
