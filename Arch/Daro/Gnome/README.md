@@ -1,18 +1,22 @@
-gnome-sinergia.sh                                 GNOME SINERGIA
+gnome-sinergia.sh                                
+
+GNOME SINERGIA
 
 ![Gnome-Sinergia](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Gnome-Sinergia.png)
 
 Incorpora los repositorios nemesis y Chaotic-aur
 
-nemesis_repo (Kiro): repositorio de bootstrap temporal que se usa únicamente para instalar kiro-keyring y kiro-mirrorlist. Una vez instalados esos paquetes, el script reemplaza la línea Server= original por Include = /etc/pacman.d/kiro-mirrorlist, es decir, usa el repo temporal solo como "puente" para obtener la lista de espejos oficial de Kiro.
+Nemesis_repo (Kiro): repositorio de bootstrap temporal que se usa únicamente para instalar kiro-keyring y kiro-mirrorlist. Una vez instalados esos paquetes, el script reemplaza la línea Server= original por Include = /etc/pacman.d/kiro-mirrorlist, es decir, usa el repo temporal solo como "puente" para obtener la lista de espejos oficial de Kiro.
 
-chaotic-aur: repositorio binario precompilado de paquetes AUR populares. Se importa su llave PGP, se instalan sus paquetes keyring y mirrorlist directamente vía URL (sin necesidad de agregarlo antes al pacman.conf), y recién después se agrega la sección [chaotic-aur]. Esto acelera muchísimo la instalación de paquetes AUR, ya que evita compilarlos localmente para los que ya están en Chaotic-AUR.
+Chaotic-aur: repositorio binario precompilado de paquetes AUR populares. Se importa su llave PGP, se instalan sus paquetes keyring y mirrorlist directamente vía URL (sin necesidad de agregarlo antes al pacman.conf), y recién después se agrega la sección [chaotic-aur]. Esto acelera muchísimo la instalación de paquetes AUR, ya que evita compilarlos localmente para los que ya están en Chaotic-AUR.
 
 Yay viene preinstalado y "activado" por defecto.
 
 En resumen: es la versión funcional y liviana, pensada para quien quiere un Arch+GNOME operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque, sin el "maquillaje" visual de las otras dos variantes.
 
-gnome-full.sh GONME FULL
+gnome-full.sh 
+
+GONME FULL
 
 Este es un script de post-instalación para Arch Linux bastante completo, pensado para dejar un entorno GNOME "amigable", muchísimas extensiones estéticas (efectos de ventana, dock, menú), suite ofimática y multimedia completa en español, y herramientas de mantenimiento del sistema.
 
@@ -62,7 +66,9 @@ yaru-colors-icon-theme – variantes de colores del tema de iconos Yaru (Ubuntu)
 fetch-git – herramienta tipo neofetch.
 gapless – reproductor de música simple.
 
-gnome-monochrome.sh GNOME MONOCROMATICO 
+gnome-monochrome.sh 
+
+GNOME MONOCROMATICO 
 
 Este script es prácticamente idéntico al anterior — misma estructura, mismos repositorios, mismos paquetes de pacman y AUR, mismas extensiones de GNOME. Las únicas diferencias son puramente estéticas.
 
