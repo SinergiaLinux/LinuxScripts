@@ -89,8 +89,13 @@ Este script es prácticamente idéntico al anterior, misma estructura, mismos re
 
 Cualidades de los temas monocromáticos 
 Menor fatiga visual: al reducir el contraste cromático, resultan más cómodos para sesiones largas frente a la pantalla.
+
 Aspecto profesional/minimalista: transmiten una estética "seria", muy usada en entornos de desarrollo o trabajo donde se prioriza el foco sobre la decoración.
+
 Coherencia visual: al no depender de un color llamativo, se integran mejor con casi cualquier wallpaper o extensión visual (como los efectos de Burn My Windows o Compiz), evitando choques de color.
+
 Mayor legibilidad de iconos: las variantes en escala de grises suelen distinguir mejor la jerarquía visual (qué está activo, qué no) porque no compiten con colores saturados.
+
 Envejecen mejor: un tema de color vivo puede sentirse "pasado de moda" con el tiempo; el gris/monocromo tiende a mantenerse vigente más tiempo.
+
 Menor distracción: ideal para quienes usan mucho la terminal o software técnico (btop, hardinfo2, etc.), donde el color debería reservarse para resaltar información relevante, no para el propio sistema operativo.
