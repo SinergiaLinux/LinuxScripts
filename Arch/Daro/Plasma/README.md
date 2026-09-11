@@ -74,21 +74,15 @@ KDE Wallet desactivado por defecto, para evitar el prompt de contraseña al inic
 ![Plasma-MonoChrome](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Plasma-Monochrome.png)
 
 
+Este script instala KDE Plasma sobre Arch Linux con una estética oscura y monocromática como eje central de la personalización 
 
-Este script automatiza el proceso de instalación y configuración de GNOME y varios paquetes adicionales en un sistema Arch Linux. Agregra los repositorios Nemesis, Chaotic-aur y clona de forma automatica a yay, necesario para instalar paquetes de aur. Asi mismo Instala tanto aplicaciones de GNOME como otras herramientas útiles para el sistema, optimizando la configuración del mismo para un entorno de usuario cómodo y completo.
-Paquetes Instalados
+Tema global: Breeze Dark, aplicado automáticamente como Look and Feel por defecto.
+Iconos: Vortex-Dark-Icons, descargados dinámicamente desde KDE Store — un set de íconos en tonos oscuros/grisáceos, coherente con el resto del sistema.
+Konsole con transparencia (Opacity=0.85) sobre un esquema de color basado en Breeze, reforzando la paleta oscura con el efecto Blur de KWin.
+Wallpaper "Nexus" y splash "Arch Simple Blue KDE 6", ambos con tonos sobrios que acompañan el conjunto oscuro.
+Incluso el ícono del lanzador de aplicaciones se reemplaza por el logo de Arch, integrado al tema de iconos oscuro en vez de quedar como un ícono de color distinto que rompa la paleta.
 
-    GNOME: Shell, Tweaks, Control Center, Terminal, Nautilus, y más.
-    Aplicaciones: VLC, Firefox, LibreOffice, Audacity, Telegram, y otras.
-    Herramientas del Sistema: Stacer, Alacritty, ArchLinux Tweak Tool y más.
-    Extensiones de GNOME: Dash to Dock, Magic Lamp, Arc Menu, entre otras.
+En conjunto, todo el sistema —terminal, iconos, tema global, splash y wallpaper— se mantiene dentro de una gama de grises/oscuros consistente, evitando acentos de color que compitan entre sí. Es la variante más cuidada en términos de cohesión visual monocromática, a diferencia de setups que mezclan temas claros, íconos de colores variados y acentos llamativos sin relación entre sí.
 
-Instrucciones de Uso
 
-Clona el repositorio.
-Ejecuta el script
-¡Disfruta de tu entorno GNOME!
 
-Contribuciones
-
-¡Las contribuciones son bienvenidas! Si deseas mejorar el script!
