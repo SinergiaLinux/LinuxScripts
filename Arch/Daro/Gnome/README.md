@@ -5,7 +5,7 @@ Es una versión funcional y liviana, pensada para quien quiere un Arch+GNOME ope
 
 ![Gnome-Sinergia](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Gnome-Sinergia.png)
 
-Incorpora los repositorios nemesis y Chaotic-aur
+**Incorpora los repositorios nemesis y Chaotic-aur**
 
 Nemesis_repo (Kiro): repositorio de bootstrap temporal que se usa únicamente para instalar kiro-keyring y kiro-mirrorlist. Una vez instalados esos paquetes, el script reemplaza la línea Server= original por Include = /etc/pacman.d/kiro-mirrorlist, es decir, usa el repo temporal solo como "puente" para obtener la lista de espejos oficial de Kiro.
 
@@ -27,7 +27,7 @@ Configura las descargas paralelas y ILoveCandy en pacman, mejorando la experienc
 
 Importa correctamente las llaves PGP de los repos de terceros (Kiro/nemesis_repo y Chaotic-AUR)
 
-Aplicaciones instaladas (pacman)
+**Aplicaciones instaladas (pacman)**
 
 Entorno de escritorio y base GNOME: gnome-shell, gdm, nautilus, gnome-control-center, gnome-tweaks, gnome-terminal, gnome-text-editor, gnome-system-monitor, gnome-disk-utility, gnome-calculator, gnome-calendar, gnome-clocks, gnome-maps, gnome-characters, gnome-logs, gnome-remote-desktop, gnome-connections, entre otros componentes estándar de GNOME.
 
@@ -49,26 +49,35 @@ Tipografía: ttf-firacode-nerd (fuente para terminal con íconos).
 
 Firmware/microcódigo: amd-ucode, intel-ucode (soporte para ambas arquitecturas de CPU).
 
-Aplicaciones instaladas vía AUR (con yay)
+**Aplicaciones instaladas vía AUR (con yay)**
+
 stacer-bin – monitor/optimizador del sistema con interfaz gráfica.
+
 gnome-shell-extension-dash2dock-lite – dock alternativo liviano.
+
 gnome-shell-extension-compiz-alike-magic-lamp-effect-git – efecto "lámpara mágica" al minimizar ventanas (estilo Compiz).
+
 gnome-shell-extension-compiz-windows-effect-git – efectos de ventana estilo Compiz.
+
 gnome-shell-extension-arc-menu-git – menú de aplicaciones estilo Windows/clásico.
+
 gnome-shell-extension-astra-monitor – monitor de recursos del sistema en la barra superior.
+
 gnome-shell-extension-burn-my-windows – efectos visuales al cerrar ventanas (fuego, matrix, hexágono, etc.).
+
 gnome-shell-extension-coverflow-alt-tab-git – alternador de ventanas estilo "coverflow" (como iTunes viejo).
+
 sinergia-dd-burner – (grabador de discos).
+
 aimp – reproductor de música.
+
 iptvnator-bin – reproductor de IPTV.
+
 yaru-colors-icon-theme – variantes de colores del tema de iconos Yaru (Ubuntu).
+
 fetch-git – herramienta tipo neofetch.
+
 gapless – reproductor de música simple.
-
-
-
-
-
 
 
 
@@ -82,7 +91,7 @@ Este script es prácticamente idéntico al anterior, misma estructura, mismos re
 ![Gnome-Mono](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/gnome-monocromatico.png)
 ![Gnome-Mono2](https://github.com/elcuchy/Sinergia/blob/main/Sinergia/images/gnome-monocromatico2.png?raw=true)
 
-Cualidades de los temas monocromáticos 
+**Cualidades de los temas monocromáticos**
 
 Menor fatiga visual: al reducir el contraste cromático, resultan más cómodos para sesiones largas frente a la pantalla.
 
