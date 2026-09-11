@@ -1,6 +1,4 @@
-gnome-sinergia.sh                                
-
-**GNOME SINERGIA**
+                                **GNOME SINERGIA** (gnome-sinergia.sh)
 
 ![Gnome-Sinergia](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Gnome-Sinergia.png)
 
