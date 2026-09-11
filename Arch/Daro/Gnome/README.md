@@ -21,7 +21,7 @@ En resumen: es la versión funcional y liviana, pensada para quien quiere un Arc
 
 gnome-full.sh 
 
-GONME FULL
+GNOME FULL
 
 Este es un script de post-instalación para Arch Linux bastante completo, pensado para dejar un entorno GNOME "amigable", muchísimas extensiones estéticas (efectos de ventana, dock, menú), suite ofimática y multimedia completa en español, y herramientas de mantenimiento del sistema.
 
