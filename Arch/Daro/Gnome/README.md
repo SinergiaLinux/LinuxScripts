@@ -1,26 +1,27 @@
-gnome-sinergia.sh GNOME SINERGIA
+gnome-sinergia.sh                                 GNOME SINERGIA
 
 ![Gnome-Sinergia](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Gnome-Sinergia.png)
 
 Los dos repositorios de terceros siguen siendo el corazón del script:
 
-nemesis_repo (Kiro): repositorio de bootstrap temporal que se usa únicamente para instalar kiro-keyring y kiro-mirrorlist. Una vez instalados esos paquetes, el script reemplaza la línea Server= original por Include = /etc/pacman.d/kiro-mirrorlist, es decir, usa el repo temporal solo como "puente" para obtener la lista de espejos oficial de Kiro. Es un patrón de bootstrap típico para repos que distribuyen su propio mirrorlist.
+nemesis_repo (Kiro): repositorio de bootstrap temporal que se usa únicamente para instalar kiro-keyring y kiro-mirrorlist. Una vez instalados esos paquetes, el script reemplaza la línea Server= original por Include = /etc/pacman.d/kiro-mirrorlist, es decir, usa el repo temporal solo como "puente" para obtener la lista de espejos oficial de Kiro.
 chaotic-aur: repositorio binario precompilado de paquetes AUR populares. Se importa su llave PGP, se instalan sus paquetes keyring y mirrorlist directamente vía URL (sin necesidad de agregarlo antes al pacman.conf), y recién después se agrega la sección [chaotic-aur]. Esto acelera muchísimo la instalación de paquetes AUR, ya que evita compilarlos localmente para los que ya están en Chaotic-AUR.
 
-Yay viene preinstalado y "activado" por defecto: el script no deja la instalación de yay como paso opcional ni la delega al usuario — la sección 5 lo compila e instala automáticamente (base-devel + git clone + makepkg -si) y lo usa de inmediato en la misma ejecución para instalar los paquetes AUR de extensiones GNOME. Esto significa que al terminar el script, el usuario ya tiene un gestor de AUR funcional listo para usar, sin pasos manuales adicionales — una diferencia importante respecto a instalaciones base de Arch, donde yay (o cualquier ayudante AUR) no viene incluido y hay que instalarlo a mano.
+Yay viene preinstalado y "activado" por defecto.
 
 En resumen: es la versión funcional y liviana, pensada para quien quiere un Arch+GNOME operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque, sin el "maquillaje" visual de las otras dos variantes.
 
 gnome-full.sh GONME FULL
 
-Este es un script de post-instalación para Arch Linux bastante completo, pensado para dejar un entorno GNOME "amigable" y completo, muchísimas extensiones estéticas (efectos de ventana, dock, menú), suite ofimática y multimedia completa en español, y herramientas de mantenimiento del sistema. Es notorio el esfuerzo puesto en la parte visual/estética, colores, iconos, efectos de Compiz/Burn My Windows y ArcMenu.
+Este es un script de post-instalación para Arch Linux bastante completo, pensado para dejar un entorno GNOME "amigable", muchísimas extensiones estéticas (efectos de ventana, dock, menú), suite ofimática y multimedia completa en español, y herramientas de mantenimiento del sistema.
 
 
 
 ![Gnome-Full](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Gnome-Full.png)
 
-Configura ParallelDownloads e ILoveCandy en pacman, mejorando la experiencia y velocidad de instalación.
-Importa correctamente las llaves PGP de los repos de terceros (Kiro/nemesis_repo y Chaotic-AUR), con un fallback a un segundo keyserver si el primero falla.
+Configura las descargas paralelas y ILoveCandy en pacman, mejorando la experiencia y velocidad de instalación.
+
+Importa correctamente las llaves PGP de los repos de terceros (Kiro/nemesis_repo y Chaotic-AUR)
 
 Aplicaciones instaladas (pacman)
 
@@ -36,7 +37,7 @@ Navegación y comunicación: firefox + idioma español, telegram-desktop, rustde
 
 Temas visuales: papirus-icon-theme, mint-l/x/y-icons, mate-icon-theme-faenza (variedad de iconos para personalizar).
 
-Grabadora/quemado de discos: ventoy (USB booteables).
+Grabadora/quemado de discos: ventoy (USB booteables). 
 
 Gestor de paquetes gráfico: pamac-aur.
 
@@ -53,7 +54,7 @@ gnome-shell-extension-arc-menu-git – menú de aplicaciones estilo Windows/clá
 gnome-shell-extension-astra-monitor – monitor de recursos del sistema en la barra superior.
 gnome-shell-extension-burn-my-windows – efectos visuales al cerrar ventanas (fuego, matrix, hexágono, etc.).
 gnome-shell-extension-coverflow-alt-tab-git – alternador de ventanas estilo "coverflow" (como iTunes viejo).
-sinergia-dd-burner – (paquete parece de nombre propio/comunitario, probablemente grabador de discos).
+sinergia-dd-burner – (grabador de discos).
 aimp – reproductor de música.
 iptvnator-bin – reproductor de IPTV.
 yaru-colors-icon-theme – variantes de colores del tema de iconos Yaru (Ubuntu).
