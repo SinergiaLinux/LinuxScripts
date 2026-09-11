@@ -83,7 +83,7 @@ gnome-monochrome.sh
 
 GNOME MONOCROMATICO 
 
-Este script es prácticamente idéntico al anterior — misma estructura, mismos repositorios, mismos paquetes de pacman y AUR, mismas extensiones de GNOME. Las únicas diferencias son puramente estéticas.
+Este script es prácticamente idéntico al anterior, misma estructura, mismos repositorios, mismos paquetes de pacman y AUR, mismas extensiones de GNOME. Las únicas diferencias son puramente estéticas.
 
 ![Gnome-Mono](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/gnome-monocromatico.png)
 ![Gnome-Mono2](https://github.com/elcuchy/Sinergia/blob/main/Sinergia/images/gnome-monocromatico2.png?raw=true)
