@@ -1,4 +1,15 @@
+gnome-sinergia.sh GNOME SINERGIA
+
 ![Gnome-Sinergia](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Gnome-Sinergia.png)
+
+Los dos repositorios de terceros siguen siendo el corazón del script:
+
+nemesis_repo (Kiro): repositorio de bootstrap temporal que se usa únicamente para instalar kiro-keyring y kiro-mirrorlist. Una vez instalados esos paquetes, el script reemplaza la línea Server= original por Include = /etc/pacman.d/kiro-mirrorlist, es decir, usa el repo temporal solo como "puente" para obtener la lista de espejos oficial de Kiro. Es un patrón de bootstrap típico para repos que distribuyen su propio mirrorlist.
+chaotic-aur: repositorio binario precompilado de paquetes AUR populares. Se importa su llave PGP, se instalan sus paquetes keyring y mirrorlist directamente vía URL (sin necesidad de agregarlo antes al pacman.conf), y recién después se agrega la sección [chaotic-aur]. Esto acelera muchísimo la instalación de paquetes AUR, ya que evita compilarlos localmente para los que ya están en Chaotic-AUR.
+
+Yay viene preinstalado y "activado" por defecto: el script no deja la instalación de yay como paso opcional ni la delega al usuario — la sección 5 lo compila e instala automáticamente (base-devel + git clone + makepkg -si) y lo usa de inmediato en la misma ejecución para instalar los paquetes AUR de extensiones GNOME. Esto significa que al terminar el script, el usuario ya tiene un gestor de AUR funcional listo para usar, sin pasos manuales adicionales — una diferencia importante respecto a instalaciones base de Arch, donde yay (o cualquier ayudante AUR) no viene incluido y hay que instalarlo a mano.
+
+En resumen: es la versión funcional y liviana, pensada para quien quiere un Arch+GNOME operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque, sin el "maquillaje" visual de las otras dos variantes.
 
 gnome-full.sh GONME FULL
 
@@ -49,6 +60,17 @@ yaru-colors-icon-theme – variantes de colores del tema de iconos Yaru (Ubuntu)
 fetch-git – herramienta tipo neofetch.
 gapless – reproductor de música simple.
 
+gnome-monochrome.sh GNOME MONOCROMATICO 
+
+Este script es prácticamente idéntico al anterior — misma estructura, mismos repositorios, mismos paquetes de pacman y AUR, mismas extensiones de GNOME. Las únicas diferencias son puramente estéticas.
 
 ![Gnome-Mono](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/gnome-monocromatico.png)
 ![Gnome-Mono2](https://github.com/elcuchy/Sinergia/blob/main/Sinergia/images/gnome-monocromatico2.png?raw=true)
+
+Cualidades de los temas monocromáticos 
+Menor fatiga visual: al reducir el contraste cromático, resultan más cómodos para sesiones largas frente a la pantalla.
+Aspecto profesional/minimalista: transmiten una estética "seria", muy usada en entornos de desarrollo o trabajo donde se prioriza el foco sobre la decoración.
+Coherencia visual: al no depender de un color llamativo, se integran mejor con casi cualquier wallpaper o extensión visual (como los efectos de Burn My Windows o Compiz), evitando choques de color.
+Mayor legibilidad de iconos: las variantes en escala de grises suelen distinguir mejor la jerarquía visual (qué está activo, qué no) porque no compiten con colores saturados.
+Envejecen mejor: un tema de color vivo puede sentirse "pasado de moda" con el tiempo; el gris/monocromo tiende a mantenerse vigente más tiempo.
+Menor distracción: ideal para quienes usan mucho la terminal o software técnico (btop, hardinfo2, etc.), donde el color debería reservarse para resaltar información relevante, no para el propio sistema operativo.
