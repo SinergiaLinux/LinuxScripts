@@ -14,6 +14,11 @@ Yay viene preinstalado y "activado" por defecto.
 
 En resumen: es la versión funcional y liviana, pensada para quien quiere un Arch+GNOME operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque, sin el "maquillaje" visual de las otras dos variantes.
 
+
+
+
+
+
 gnome-full.sh 
 
 GONME FULL
@@ -65,6 +70,14 @@ iptvnator-bin – reproductor de IPTV.
 yaru-colors-icon-theme – variantes de colores del tema de iconos Yaru (Ubuntu).
 fetch-git – herramienta tipo neofetch.
 gapless – reproductor de música simple.
+
+
+
+
+
+
+
+
 
 gnome-monochrome.sh 
 
