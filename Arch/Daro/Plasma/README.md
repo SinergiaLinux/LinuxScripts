@@ -1,10 +1,8 @@
-Instalación de Plasma en Arch Linux
-
-plasma-sinergia
+**PLASMA SINERGIA** (plasma-sinergia.sh)
 
 ![Plasma-Sinergia](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Plasma-sinergia.png)
 
-plasma-full
+**PLASMA FULL** (plasma-full.sh)
 
 ![Plasma-Full](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Pasma-Full.png)
 
@@ -12,7 +10,7 @@ plasma-full
 gnome-sinergia.sh Este script instala el entorno de escritorio GNOME junto con una serie de paquetes útiles y extensiones para mejorar la experiencia en Arch Linux. Además, configura algunos parámetros del sistema como la habilitación de gdm (el gestor de sesiones) y la configuración de GRUB.
 Descripción
 
-plasma-monochrome
+**PLASMA MONOCROMATICO** (plasma-monochrome.sh)
 
 ![Plasma-MonoChrome](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Plasma-Monochrome.png)
 
