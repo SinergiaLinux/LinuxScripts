@@ -12,11 +12,11 @@ Dentro del menú interactivo de archinstall, configurar en orden:
 
 Selecionar tu idioma, en este caso Spanish 
 
-En localidades selecciona idioma del teclado ej.si querés todo en español seria es y en idioma local es_UY.UTF-8 (selecionar UTF de tu pais), y vamos a regresar.
+En localidades selecciona idioma del teclado ej. si querés todo en español seria es y en idioma local es_UY.UTF-8 (selecionar UTF de tu pais), y vamos a regresar.
 
 Espejos y repositorios — vamos hacia repositorios opcionales y seleccionamos Multilib y vamos a regresar.
 
-Configuracion de disco  elegir el disco y el esquema de particionado (por defecto está bien para la mayoría de los casos; usar EXT4 o BTRFS según preferencia) y vamos a regresar.
+Configuracion de disco — elegir el disco y el esquema de particionado (por defecto está bien para la mayoría de los casos; usar EXT4 o BTRFS según preferencia) y vamos a regresar.
 
 Swap — Lo dejamos por defecto como esta
 
