@@ -10,7 +10,7 @@ Chaotic-aur: repositorio binario precompilado de paquetes AUR populares. Se impo
 
 Yay viene preinstalado y "activado" por defecto.
 
-n resumen: es la versión funcional y liviana, pensada para quien quiere un Arch+Plasma operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque, sin el "maquillaje" visual de las otras dos variantes.
+En resumen: es la versión funcional y liviana, pensada para quien quiere un Arch+Plasma operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque, sin el "maquillaje" visual de las otras dos variantes.
 
 
 
@@ -18,9 +18,56 @@ n resumen: es la versión funcional y liviana, pensada para quien quiere un Arch
 
 ![Plasma-Full](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Pasma-Full.png)
 
+Qué hace el script
 
-gnome-sinergia.sh Este script instala el entorno de escritorio GNOME junto con una serie de paquetes útiles y extensiones para mejorar la experiencia en Arch Linux. Además, configura algunos parámetros del sistema como la habilitación de gdm (el gestor de sesiones) y la configuración de GRUB.
-Descripción
+Instala y configura un entorno KDE Plasma completo sobre Arch Linux.
+
+Repositorios configurados
+
+nemesis_repo (Kiro): repo temporal de bootstrap para obtener kiro-keyring y kiro-mirrorlist, que luego reemplaza la entrada original en pacman.conf.
+
+chaotic-aur: repositorio de paquetes AUR precompilados, con importación de llave PGP y reintentos automáticos si el keyserver falla.
+
+Aplicaciones instaladas (pacman)
+
+Escritorio y base Plasma: plasma, sddm, sddm-kcm, konsole, dolphin, kate, kcalc, kwalletmanager, yakuake, plasma-systemmonitor, powerdevil, kvantum + kvantum-qt5.
+
+Oficina: okular, libreoffice-fresh-es, hunspell-es_uy.
+
+Multimedia: vlc + plugins, mpv, obs-studio, audacity, ardour, kdenlive, koko.
+
+Sistema/utilidades: hardinfo2, btop, gparted, ventoy, ark, unrar, unarchiver, unzip, p7zip, archlinux-tweak-tool-gtk4, shelly, ntfs-3g, os-prober, amd-ucode, intel-ucode.
+
+Red y comunicación: firefox + idioma español, telegram-desktop, qbittorrent, rustdesk-bin.
+
+Temas de iconos base: papirus-icon-theme, mint-l/x/y-icons, mate-icon-theme-faenza.
+
+Otros: fastfetch, nano, gnome-boxes.
+
+Se desinstala: discover (centro de software por defecto de KDE).
+
+Paquetes AUR (yay)
+
+stacer-bin, sinergia-dd-burner, iptvnator-bin, yamis-icon-theme-git, fetch-git.
+
+Personalización automatizada
+
+Tema global Breeze Dark, aplicado vía plasma-apply-lookandfeel con respaldo manual sobre kdeglobals si el comando no existe.
+
+Iconos Vortex-Dark-Icons, descargados dinámicamente desde KDE Store (consultando la API OCS para no depender de un link que pueda vencer).
+
+Konsole transparente (Opacity=0.85), con su propio color scheme y perfil, más el efecto Blur de KWin activado para que se vea bien.
+
+Wallpaper "Nexus" fijado tanto en los defaults del look-and-feel como en la configuración del usuario, con intento de refresco en caliente.
+
+Splash de arranque personalizado ("Arch Simple Blue KDE 6"), descargado desde KDE Store e instalado como paquete look-and-feel (formato correcto para Plasma 6).
+
+SDDM por defecto.
+
+KDE Wallet desactivado por defecto, para evitar el prompt de contraseña al iniciar aplicaciones.
+
+
+
 
 **PLASMA MONOCROMATICO** (plasma-monochrome.sh)
 
