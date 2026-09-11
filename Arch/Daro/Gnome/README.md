@@ -1,6 +1,8 @@
 
 ## GNOME SINERGIA (gnome-sinergia.sh)
 
+Es una versión funcional y liviana, pensada para quien quiere un Arch+GNOME operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque, sin el "maquillaje" visual de las otras dos variantes.
+
 ![Gnome-Sinergia](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Gnome-Sinergia.png)
 
 Incorpora los repositorios nemesis y Chaotic-aur
@@ -11,14 +13,7 @@ Chaotic-aur: repositorio binario precompilado de paquetes AUR populares. Se impo
 
 Yay viene preinstalado y "activado" por defecto.
 
-En resumen: es la versión funcional y liviana, pensada para quien quiere un Arch+GNOME operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque, sin el "maquillaje" visual de las otras dos variantes.
-
-
-
-
-
-
-
+ 
 
 ## GNOME FULL (gnome-full.sh) 
 
@@ -88,6 +83,7 @@ Este script es prácticamente idéntico al anterior, misma estructura, mismos re
 ![Gnome-Mono2](https://github.com/elcuchy/Sinergia/blob/main/Sinergia/images/gnome-monocromatico2.png?raw=true)
 
 Cualidades de los temas monocromáticos 
+
 Menor fatiga visual: al reducir el contraste cromático, resultan más cómodos para sesiones largas frente a la pantalla.
 
 Aspecto profesional/minimalista: transmiten una estética "seria", muy usada en entornos de desarrollo o trabajo donde se prioriza el foco sobre la decoración.
