@@ -18,17 +18,17 @@ En resumen: es la versión funcional y liviana, pensada para quien quiere un Arc
 
 ![Plasma-Full](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Pasma-Full.png)
 
-Qué hace el script
+**Qué hace el script**
 
 Instala y configura un entorno KDE Plasma completo sobre Arch Linux.
 
-Repositorios configurados
+**Repositorios configurados**
 
 nemesis_repo (Kiro): repo temporal de bootstrap para obtener kiro-keyring y kiro-mirrorlist, que luego reemplaza la entrada original en pacman.conf.
 
 chaotic-aur: repositorio de paquetes AUR precompilados, con importación de llave PGP y reintentos automáticos si el keyserver falla.
 
-Aplicaciones instaladas (pacman)
+**Aplicaciones instaladas (pacman)**
 
 Escritorio y base Plasma: plasma, sddm, sddm-kcm, konsole, dolphin, kate, kcalc, kwalletmanager, yakuake, plasma-systemmonitor, powerdevil, kvantum + kvantum-qt5.
 
@@ -46,11 +46,11 @@ Otros: fastfetch, nano, gnome-boxes.
 
 Se desinstala: discover (centro de software por defecto de KDE).
 
-Paquetes AUR (yay)
+**Paquetes AUR (yay)**
 
 stacer-bin, sinergia-dd-burner, iptvnator-bin, yamis-icon-theme-git, fetch-git.
 
-Personalización automatizada
+**Personalización automatizada**
 
 Tema global Breeze Dark, aplicado vía plasma-apply-lookandfeel con respaldo manual sobre kdeglobals si el comando no existe.
 
