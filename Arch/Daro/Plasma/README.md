@@ -1,4 +1,4 @@
-**PLASMA SINERGIA** (plasma-sinergia.sh)
+## PLASMA SINERGIA (plasma-sinergia.sh)
 
 ![Plasma-Sinergia](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Plasma-sinergia.png)
 
@@ -14,7 +14,7 @@ En resumen: es la versión funcional y liviana, pensada para quien quiere un Arc
 
 
 
-**PLASMA FULL** (plasma-full.sh)
+## PLASMA FULL (plasma-full.sh)
 
 ![Plasma-Full](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Pasma-Full.png)
 
@@ -69,7 +69,7 @@ KDE Wallet desactivado por defecto, para evitar el prompt de contraseña al inic
 
 
 
-**PLASMA MONOCROMATICO** (plasma-monochrome.sh)
+## PLASMA MONOCROMATICO (plasma-monochrome.sh)
 
 ![Plasma-MonoChrome](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Plasma-Monochrome.png)
 
