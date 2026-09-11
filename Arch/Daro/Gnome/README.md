@@ -1,4 +1,5 @@
-                                **GNOME SINERGIA** (gnome-sinergia.sh)
+
+**GNOME SINERGIA** (gnome-sinergia.sh)
 
 ![Gnome-Sinergia](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Gnome-Sinergia.png)
 
@@ -17,9 +18,9 @@ En resumen: es la versión funcional y liviana, pensada para quien quiere un Arc
 
 
 
-gnome-full.sh 
 
-**GNOME FULL**
+
+**GNOME FULL** (gnome-full.sh) 
 
 Este es un script de post-instalación para Arch Linux bastante completo, pensado para dejar un entorno GNOME "amigable", muchísimas extensiones estéticas (efectos de ventana, dock, menú), suite ofimática y multimedia completa en español, y herramientas de mantenimiento del sistema.
 
@@ -77,9 +78,9 @@ gapless – reproductor de música simple.
 
 
 
-gnome-monochrome.sh 
 
-**GNOME MONOCROMATICO** 
+
+**GNOME MONOCROMATICO** (gnome-monochrome.sh) 
 
 Este script es prácticamente idéntico al anterior, misma estructura, mismos repositorios, mismos paquetes de pacman y AUR, mismas extensiones de GNOME. Las únicas diferencias son puramente estéticas.
 
