@@ -68,6 +68,8 @@ escribimos nuestra contraseña de usuario
 
 Luego solicita un par de veces mas la contraseña durante la instalacion.
 
+Una vez finalizado el script, se reinicira automaticamente el sistema.
+
 
 
 
