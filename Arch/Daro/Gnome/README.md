@@ -1,3 +1,10 @@
+# GNOME
+
+GNOME es un entorno de escritorio (desktop environment) para sistemas Linux/Unix, es uno de los más usados con una filosofia de diseño , minimalista y simplificada , prioriza una interfaz limpia y sin distracciones sobre la personalización extensiva, esta basado en  basado en el toolkit GTK, usa un paradigma de "Activities overview" (vista de actividades) en vez del típico escritorio con íconos y barra de tareas tradicional; navegación centrada en el teclado y gestos.
+Características principales:
+
+
+
 
 ## GNOME SINERGIA (gnome-sinergia.sh)
 
