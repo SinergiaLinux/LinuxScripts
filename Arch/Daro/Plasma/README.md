@@ -128,7 +128,7 @@ base-devel, git
 Esta es una versión mucho más elaborada del script anterior: además de instalar Plasma y paquetes, aplica un theming completo y automatizado al sistema (tema global, iconos, splash, wallpaper, transparencia en Konsole) descargando recursos directamente desde KDE Store vía su API OCS. 
 
 
-Utilidades iniciales: define funciones para descargar contenido de KDE Store por ID (fetch_kde_store_file) y para descomprimir archivos en varios formatos (extract_archive).
+Utilidades iniciales: define funciones para descargar contenido de KDE Store.
 
 Configura pacman: ILoveCandy, descargas paralelas, multilib.
 
@@ -139,6 +139,7 @@ Instala paquetes oficiales/Chaotic-AUR: Plasma completo más un set bastante má
 Desinstala discover (el centro de software de KDE) si está presente.
 
 Instala YAY y paquetes AUR adicionales (stacer, IPTV, tema de iconos, fetch).
+
 Aplica Breeze Dark como tema global por defecto.
 
 Instala y aplica el tema de iconos "Vortex-Dark-Icons" desde KDE Store, y genera un tema compuesto que hereda de este pero reemplaza el ícono del lanzador de aplicaciones por el logo de Arch Linux.
