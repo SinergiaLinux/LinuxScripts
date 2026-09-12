@@ -233,7 +233,7 @@ Iconos: usa el tema YAMIS (yamis-icon-theme-git vía AUR)
 
 Wallpaper: fija "Cold Ripple" de Risto Saukonpää como fondo por defecto.
 
-SDDM: Utiliza el tema monochrome-kde desde GitHub (pwyde/monochrome-kde), lo instala en /usr/share/sddm/themes/monochrome y lo fija como tema activo en /etc/sddm.conf.d/theme.conf.user.
+SDDM: Utiliza el tema monochrome-kde.
 
 
 
