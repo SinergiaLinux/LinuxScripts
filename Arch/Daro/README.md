@@ -82,7 +82,7 @@ Una vez finalizado el script, se reinicira automaticamente el sistema.
 
 
 
-## Descripción
+## A disfrutar de esta maravillosa Distro llamada ArchLinux 
 
 
 
