@@ -32,6 +32,28 @@ fi
 
 
 # ==========================================
+# 1.1 CONFIGURACIÓN DEL REPOSITORIO MULTILIB
+# ==========================================
+echo "==> Verificando repositorio multilib..."
+
+if grep -q "^\[multilib\]" /etc/pacman.conf; then
+    echo "==> El repositorio multilib ya está habilitado."
+elif grep -q "^#\[multilib\]" /etc/pacman.conf; then
+    echo "==> Habilitando repositorio multilib (estaba comentado)..."
+    sudo sed -i '/^#\[multilib\]/,/^#Include/ s/^#//' /etc/pacman.conf
+else
+    echo "==> Agregando repositorio multilib (no existía en el archivo)..."
+    sudo bash -c 'cat << EOF >> /etc/pacman.conf
+
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+EOF'
+fi
+
+sudo pacman -Sy
+
+
+# ==========================================
 # 2. CONFIGURACIÓN DEL REPOSITORIO NEMESIS_REPO (KIRO)
 # ==========================================
 echo "==> Configurando el repositorio nemesis_repo..."
