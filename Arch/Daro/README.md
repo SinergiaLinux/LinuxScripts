@@ -4,7 +4,7 @@
 
 Bootear desde el ISO oficial de Arch Linux y, dentro de la terminal, ejecutar:
 
-archinstall
+    archinstall
 
 **Paso 2 — Configurar el perfil de archinstall**
 
