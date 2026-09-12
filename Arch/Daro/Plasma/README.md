@@ -8,7 +8,7 @@ Muy personalizable: casi todos los elementos visuales (paneles, iconos, temas, e
 
 Liviano y rápido: en general consume menos recursos que GNOME, lo que lo hace popular tanto en equipos modestos como en equipos potentes donde se busca rendimiento.
 
-Basado en Qt/KDE Frameworks: usa las librerías Qt en vez de GTK (que usa GNOME), lo que define el aspecto y comportamiento de sus aplicaciones nativas.
+Basado en Qt/KDE Frameworks: usa las librerías Qt lo que define el aspecto y comportamiento de sus aplicaciones nativas.
 
 Creamos tres scripts post instalacion los cuales son **plasma-sinergia**, **plasma-full** y **plasma-monochrome**, los tres incorporan por defecto los repositorios de Nemesis, Chaotic y Multilib. 
 
