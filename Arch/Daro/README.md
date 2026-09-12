@@ -54,22 +54,30 @@ Iniciar sesión con el usuario creado. Como el perfil elegido fue mínimo (solo 
 
 Instalar git con sudo pacman -S git en caso de no haberlo instalado con el archinstall.
 
-Clonar HitGub con git clone https://github.com/SinergiaLinux/LinuxScripts
+Clonar HitGub con 
+
+    git clone https://github.com/SinergiaLinux/LinuxScripts
 
 
-cd LinuxScripts
+    cd LinuxScripts
 
-cd Arch
+    cd Arch
 
-cd Daro
+    cd Daro
 
-ls para listar las carpetas con los distintos escritorios, en este caso voy a optar por Gnome
+para listar las carpetas con los distintos escritorios, en este caso voy a optar por Gnome
 
-cd Gnome
+    ls
 
-ls (para listar los scripts)
+    cd Gnome
 
-sh nombredelscrpt.sh por ej. sh gnome-full.sh
+para listar los scripts
+
+    ls
+
+sh nombredelscrpt.sh por ej. 
+
+    sh gnome-full.sh
 
 escribimos nuestra contraseña de usuario 
 
