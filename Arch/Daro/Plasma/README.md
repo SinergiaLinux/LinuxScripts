@@ -61,11 +61,9 @@ Como yay no viene instalado por defecto en Arch el script se encarga de "activar
 ![Plasma-Sinergia](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Plasma-sinergia.png)
 
 
-Es una versión funcional y liviana, pensada para quien quiere un Arch+Plasma operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque, sin el "maquillaje" visual de las otras dos variantes.
+Es una versión funcional y liviana, pensada para quien quiere un Arch+Plasma operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque.
 
 Es un script de post-instalación que automatiza la configuración de un sistema con entorno KDE Plasma. 
-
-Hace lo siguiente:
 
 Configura pacman: activa ILoveCandy, descargas paralelas y el repositorio multilib.
 
