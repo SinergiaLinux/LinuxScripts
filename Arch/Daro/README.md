@@ -1,6 +1,6 @@
 # Instalación de Arch Linux desde cero con archinstall + script
 
-**Paso 1 — Arrancar el instalador de Arch**
+### Paso 1 — Arrancar el instalador de Arch
 
 Bootear desde el ISO oficial de Arch Linux y, dentro de la terminal, ejecutar:
 
@@ -18,7 +18,7 @@ Espejos y repositorios — vamos hacia repositorios opcionales y seleccionamos M
 
 Configuracion de disco — elegir el disco y el esquema de particionado (por defecto está bien para la mayoría de los casos; usar EXT4 o BTRFS según preferencia) y vamos a regresar.
 
-Swap — Lo dejamos por defecto como esta
+Swap — Lo dejamos por defecto.
 
 Gestor de arranque — selecionamos GRUB (el script después edita /etc/default/grub, así que es importante que sea GRUB y no systemd-boot) y vamos a regresar.
 
@@ -52,7 +52,9 @@ Iniciar sesión con el usuario creado. Como el perfil elegido fue mínimo (solo 
 
 **Paso 5 — Ejecutar el script*
 
-Instalar git con sudo pacman -S git en caso de no haberlo instalado con el archinstall.
+Instalar git en caso de no haberlo instalado con el archinstall.
+
+    sudo pacman -S git
 
 Clonar HitGub con 
 
