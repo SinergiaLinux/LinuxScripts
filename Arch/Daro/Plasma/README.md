@@ -10,9 +10,9 @@ Liviano y rápido: en general consume menos recursos que GNOME, lo que lo hace p
 
 Basado en Qt/KDE Frameworks: usa las librerías Qt en vez de GTK (que usa GNOME), lo que define el aspecto y comportamiento de sus aplicaciones nativas.
 
-Creamos tres scripts post instalacion los cuales son **plasma-sinergia**, **plasma-full** y **plasma-monocrome**, los tres incorporan por defecto los repositorios de Nemesis, Chaotic y Multilib. 
+Creamos tres scripts post instalacion los cuales son **plasma-sinergia**, **plasma-full** y **plasma-monochrome**, los tres incorporan por defecto los repositorios de Nemesis, Chaotic y Multilib. 
 
-**Nemesis repo (kiro)**: fue creado por Erik Dubois, un desarrollador belga bastante conocido en la comunidad Arch por ser el creador original de ArcoLinux, una distribución educativa basada en Arch orientada a enseñar cómo funciona el sistema por dentro. La razon por la cual decidimos que el repositorio inicie por defecto es para que el script pueda instalar Archlinux Tweak Tool, una herramienta muy potente que nos permite configurar el sistema con un par de click, una verdadera navaja suiza. 
+**Nemesis repo (Kiro)**: fue creado por Erik Dubois, un desarrollador belga bastante conocido en la comunidad Arch por ser el creador original de ArcoLinux, una distribución educativa basada en Arch orientada a enseñar cómo funciona el sistema por dentro. La razon por la cual decidimos que el repositorio inicie por defecto es para que el script pueda instalar Archlinux Tweak Tool, una herramienta muy potente que nos permite configurar el sistema con un par de click, una verdadera navaja suiza. 
 
 **Chaotic-AUR**: es un repositorio no oficial de paquetes precompilados para Arch Linux, que automatiza el proceso de compilación de paquetes del AUR.
 
