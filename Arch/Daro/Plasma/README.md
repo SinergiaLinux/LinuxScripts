@@ -60,16 +60,67 @@ Como yay no viene instalado por defecto en Arch el script se encarga de "activar
 
 ![Plasma-Sinergia](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Plasma-sinergia.png)
 
-Incorpora los repositorios nemesis y Chaotic-aur
 
-Nemesis_repo (Kiro): repositorio de bootstrap temporal que se usa únicamente para instalar kiro-keyring y kiro-mirrorlist. Una vez instalados esos paquetes, el script reemplaza la línea Server= original por Include = /etc/pacman.d/kiro-mirrorlist, es decir, usa el repo temporal solo como "puente" para obtener la lista de espejos oficial de Kiro.
+Es una versión funcional y liviana, pensada para quien quiere un Arch+Plasma operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque, sin el "maquillaje" visual de las otras dos variantes.
 
-Chaotic-aur: repositorio binario precompilado de paquetes AUR populares. Se importa su llave PGP, se instalan sus paquetes keyring y mirrorlist directamente vía URL (sin necesidad de agregarlo antes al pacman.conf), y recién después se agrega la sección [chaotic-aur]. Esto acelera muchísimo la instalación de paquetes AUR, ya que evita compilarlos localmente para los que ya están en Chaotic-AUR.
+Es un script de post-instalación que automatiza la configuración de un sistema con entorno KDE Plasma. 
 
-.
+Hace lo siguiente:
 
-En resumen: es la versión funcional y liviana, pensada para quien quiere un Arch+Plasma operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque, sin el "maquillaje" visual de las otras dos variantes.
+Configura pacman: activa ILoveCandy, descargas paralelas y el repositorio multilib.
 
+Agrega repositorios de terceros: nemesis_repo (para el keyring/mirrorlist de "Kiro") y Chaotic-AUR, importando y firmando sus claves PGP.
+
+Instala paquetes desde los repos oficiales y Chaotic-AUR (Plasma, apps, utilidades).
+
+Instala YAY (compilándolo desde AUR) y con él agrega stacer-bin.
+
+Configura servicios: habilita sddm como display manager (deshabilitando otros como gdm/lightdm/entrance) y activa os-prober en GRUB para detectar otros sistemas operativos.
+
+Limpieza y reinicio: borra carpeta temporal y ofrece reiniciar (con auto-continuar a los 15s).
+
+
+**Aplicaciones/paquetes instalados**
+
+Entorno de escritorio y sesión:
+
+plasma, sddm, sddm-kcm, powerdevil, kwalletmanager
+
+Utilidades del sistema:
+
+amd-ucode, intel-ucode, ntfs-3g, archlinux-tweak-tool-gtk4, hardinfo2, btop, gparted, plasma-systemmonitor, os-prober, fastfetch
+
+Aplicaciones de KDE / productividad:
+
+okular (visor PDF), konsole (terminal), dolphin (gestor de archivos), kcalc (calculadora), kate (editor de texto), koko (visor de imágenes), ark (compresor)
+
+Multimedia:
+
+vlc, vlc-plugins-all, mpv
+
+Compresión/archivos:
+
+unrar, unarchiver, p7zip
+
+Navegador y ofimática:
+
+firefox, firefox-i18n-es-ar, libreoffice-fresh-es, hunspell-es_uy (corrector ortográfico español-Uruguay)
+
+Comunicación:
+
+telegram-desktop
+
+Gestión de paquetes:
+
+shelly, yay (compilado desde AUR)
+
+Desde AUR (vía yay):
+
+stacer-bin (monitor/optimizador del sistema)
+
+Dependencias de compilación:
+
+base-devel, git
 
 
 ## PLASMA FULL (plasma-full.sh)
