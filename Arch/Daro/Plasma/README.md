@@ -12,9 +12,13 @@ Basado en Qt/KDE Frameworks: usa las librerías Qt en vez de GTK (que usa GNOME)
 
 Creamos tres scripts post instalacion los cuales son **plasma-sinergia**, **plasma-full** y **plasma-monochrome**, los tres incorporan por defecto los repositorios de Nemesis, Chaotic y Multilib. 
 
-**Nemesis repo (Kiro)**: fue creado por Erik Dubois, un desarrollador belga bastante conocido en la comunidad Arch por ser el creador original de ArcoLinux, una distribución educativa basada en Arch orientada a enseñar cómo funciona el sistema por dentro. La razon por la cual decidimos que el repositorio inicie por defecto es para que el script pueda instalar Archlinux Tweak Tool, una herramienta muy potente que nos permite configurar el sistema con un par de click, una verdadera navaja suiza. 
+**Nemesis repo (Kiro)**
 
-**Chaotic-AUR**: es un repositorio no oficial de paquetes precompilados para Arch Linux, que automatiza el proceso de compilación de paquetes del AUR.
+Fue creado por Erik Dubois, un desarrollador belga bastante conocido en la comunidad Arch por ser el creador original de ArcoLinux, una distribución educativa basada en Arch orientada a enseñar cómo funciona el sistema por dentro. La razon por la cual decidimos que el repositorio inicie por defecto es para que el script pueda instalar Archlinux Tweak Tool, una herramienta muy potente que nos permite configurar el sistema con un par de click, una verdadera navaja suiza. 
+
+**Chaotic-AUR**
+
+Es un repositorio no oficial de paquetes precompilados para Arch Linux, que automatiza el proceso de compilación de paquetes del AUR.
 
 La mayoría de los paquetes disponibles en Chaotic-AUR se compilan automáticamente a partir de su respectivo paquete fuente del AUR, y el resultado se distribuye como binario listo para instalar, tal como cualquier paquete oficial de los repos, esto nos permite acceder a aplicaciones que no estan en los repositorios oficiales y poder instalarlas desde el scripts.
 
@@ -30,9 +34,9 @@ Mejora continua de seguridad: el equipo reporta activamente haber detectado y bl
 
 Paquetes especializados no disponibles oficialmente: por ejemplo, ofrece versiones de kernels con parches para dar soporte a drivers NVIDIA compatibles con todos los kernels del repositorio, algo que no siempre está cubierto por los paquetes oficiales de Arch. 
 
-**Multilib**: es un repositorio oficial de Arch Linux (mantenido por el propio proyecto, no de terceros) que provee paquetes de 32 bits para poder ejecutarlos en un sistema de 64 bits.
+**Multilib**
 
-La razón principal
+Es un repositorio oficial de Arch Linux (mantenido por el propio proyecto, no de terceros) que provee paquetes de 32 bits para poder ejecutarlos en un sistema de 64 bits.
 
 Arch Linux es una distribución puramente x86_64 (64 bits) desde hace años. Todo lo que instalás por defecto, el kernel, las librerías del sistema, las apps son de 64 bits. El problema es que todavía existe software de 32 bits que necesita sus propias versiones de las librerías del sistema (glibc, libGL, etc.) para funcionar, y esas versiones de 32 bits no vienen incluidas en la instalación base y multilib provee justamente esas librerías compiladas en 32 bits, para que un sistema de 64 bits pueda ejecutar binarios de 32 bits sin problemas.
 
@@ -45,7 +49,11 @@ Drivers gráficos (NVIDIA/AMD): los drivers propietarios de NVIDIA, por ejemplo,
 
 Software heredado (legacy): algunas herramientas viejas de empresas, emuladores, o binarios distribuidos solo en 32 bits.
 
-**Yay**: viene preinstalado y "activado" por defecto.
+**Yay**
+
+Es una herramienta que te deja instalar programas en Arch Linux desde el AUR (una especie de "tienda comunitaria" de aplicaciones que la gente sube, pero que no vienen ya armadas — hay que compilarlas).
+
+Como yay no viene instalado por defecto en Arch el script se encarga de "activarlo" por defecto.
 
 
 ## PLASMA SINERGIA (plasma-sinergia.sh)
