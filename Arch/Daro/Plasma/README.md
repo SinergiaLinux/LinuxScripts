@@ -125,54 +125,95 @@ base-devel, git
 
 ![Plasma-Full](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Pasma-Full.png)
 
-**Qué hace el script**
+Esta es una versión mucho más elaborada del script anterior: además de instalar Plasma y paquetes, aplica un theming completo y automatizado al sistema (tema global, iconos, splash, wallpaper, transparencia en Konsole) descargando recursos directamente desde KDE Store vía su API OCS. 
 
-Instala y configura un entorno KDE Plasma completo sobre Arch Linux.
 
-**Repositorios configurados**
+Utilidades iniciales: define funciones para descargar contenido de KDE Store por ID (fetch_kde_store_file) y para descomprimir archivos en varios formatos (extract_archive).
 
-nemesis_repo (Kiro): repo temporal de bootstrap para obtener kiro-keyring y kiro-mirrorlist, que luego reemplaza la entrada original en pacman.conf.
+Configura pacman: ILoveCandy, descargas paralelas, multilib.
 
-chaotic-aur: repositorio de paquetes AUR precompilados, con importación de llave PGP y reintentos automáticos si el keyserver falla.
+Agrega repositorios: nemesis_repo (bootstrap para Kiro), luego Chaotic-AUR con sus claves PGP.
 
-**Aplicaciones instaladas (pacman)**
+Instala paquetes oficiales/Chaotic-AUR: Plasma completo más un set bastante más grande que el script anterior (multimedia, producción audiovisual, temas de iconos, virtualización, etc.).
 
-Escritorio y base Plasma: plasma, sddm, sddm-kcm, konsole, dolphin, kate, kcalc, kwalletmanager, yakuake, plasma-systemmonitor, powerdevil, kvantum + kvantum-qt5.
+Desinstala discover (el centro de software de KDE) si está presente.
 
-Oficina: okular, libreoffice-fresh-es, hunspell-es_uy.
+Instala YAY y paquetes AUR adicionales (stacer, IPTV, tema de iconos, fetch).
+Aplica Breeze Dark como tema global por defecto.
 
-Multimedia: vlc + plugins, mpv, obs-studio, audacity, ardour, kdenlive, koko.
+Instala y aplica el tema de iconos "Vortex-Dark-Icons" desde KDE Store, y genera un tema compuesto que hereda de este pero reemplaza el ícono del lanzador de aplicaciones por el logo de Arch Linux.
 
-Sistema/utilidades: hardinfo2, btop, gparted, ventoy, ark, unrar, unarchiver, unzip, p7zip, archlinux-tweak-tool-gtk4, shelly, ntfs-3g, os-prober, amd-ucode, intel-ucode.
+Configura Konsole con un perfil transparente por defecto (Opacity=0.85) y activa el efecto Blur de KWin.
 
-Red y comunicación: firefox + idioma español, telegram-desktop, qbittorrent, rustdesk-bin.
+Fija el wallpaper "Nexus" como fondo por defecto (tanto a nivel sistema como en la config del usuario).
 
-Temas de iconos base: papirus-icon-theme, mint-l/x/y-icons, mate-icon-theme-faenza.
+Instala y aplica el splash de arranque "Arch Simple Blue KDE 6" desde KDE Store.
 
-Otros: fastfetch, nano, gnome-boxes.
-
-Se desinstala: discover (centro de software por defecto de KDE).
-
-**Paquetes AUR (yay)**
-
-stacer-bin, sinergia-dd-burner, iptvnator-bin, yamis-icon-theme-git, fetch-git.
-
-**Personalización automatizada**
-
-Tema global Breeze Dark, aplicado vía plasma-apply-lookandfeel con respaldo manual sobre kdeglobals si el comando no existe.
-
-Iconos Vortex-Dark-Icons, descargados dinámicamente desde KDE Store (consultando la API OCS para no depender de un link que pueda vencer).
-
-Konsole transparente (Opacity=0.85), con su propio color scheme y perfil, más el efecto Blur de KWin activado para que se vea bien.
-
-Wallpaper "Nexus" fijado tanto en los defaults del look-and-feel como en la configuración del usuario, con intento de refresco en caliente.
-
-Splash de arranque personalizado ("Arch Simple Blue KDE 6"), descargado desde KDE Store e instalado como paquete look-and-feel (formato correcto para Plasma 6).
-
-SDDM por defecto.
+Configura SDDM como display manager (dejando su tema por defecto, sin personalizar).
 
 KDE Wallet desactivado por defecto, para evitar el prompt de contraseña al iniciar aplicaciones.
 
+Limpieza y reinicio: borra carpeta temporal y ofrece reiniciar (con auto-continuar a los 15s).
+
+
+**Aplicaciones/paquetes instalados**
+
+Entorno de escritorio y sesión:
+
+plasma, sddm, sddm-kcm, powerdevil, kwalletmanager, yakuake
+
+Utilidades del sistema:
+
+amd-ucode, intel-ucode, ntfs-3g, archlinux-tweak-tool-gtk4, hardinfo2, btop, gparted, plasma-systemmonitor, os-prober, shelly, ventoy, gnome-boxes, rustdesk-bin
+
+Aplicaciones de KDE / productividad:
+
+okular, konsole, dolphin, kcalc, kate, koko, ark
+
+Multimedia (reproducción):
+
+vlc, vlc-plugins-all, mpv
+
+Producción audiovisual:
+
+obs-studio, audacity, ardour, kdenlive
+
+Compresión/archivos:
+
+unrar, unarchiver, unzip, p7zip
+
+Navegador y ofimática:
+
+firefox, firefox-i18n-es-ar, libreoffice-fresh-es, hunspell-es_uy
+
+Comunicación:
+
+telegram-desktop, qbittorrent
+
+Personalización visual:
+
+kvantum, kvantum-qt5, papirus-icon-theme, mint-l-icons, mint-x-icons, mint-y-icons, mate-icon-theme-faenza
+
+Gestión de paquetes:
+
+shelly, yay (compilado desde AUR)
+
+Desde AUR (vía yay):
+
+stacer-bin, sinergia-dd-burner, iptvnator-bin, yamis-icon-theme-git, fetch-git
+
+Descargados directamente desde KDE Store (fuera de pacman/AUR):
+
+Vortex-Dark-Icons (tema de iconos)
+Arch Simple Blue KDE 6 (splash de Plasma)
+
+Desinstalado:
+
+discover
+
+Dependencias de compilación:
+
+base-devel, git
 
 
 
