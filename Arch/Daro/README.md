@@ -56,9 +56,16 @@ Instalar git con sudo pacman -S git en caso de no haberlo instalado con el archi
 
 Clonar HitGub con git clone https://github.com/SinergiaLinux/LinuxScripts
 
-cd SinergiaLinux
 
 cd LinuxScripts
+
+cd Arch
+
+cd Daro
+
+ls para listar las carpetas con los distintos escritorios, en este caso voy a optar por Gnome
+
+cd Gnome
 
 ls (para listar los scripts)
 
