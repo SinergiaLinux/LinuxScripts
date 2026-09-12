@@ -51,17 +51,89 @@ Como yay no viene instalado por defecto en Arch el script se encarga de "activar
 
 ## GNOME SINERGIA (gnome-sinergia.sh)
 
-Es una versión funcional y liviana, pensada para quien quiere un Arch+GNOME operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque, sin el "maquillaje" visual de las otras dos variantes.
+Es una versión funcional y liviana, pensada para quien quiere un Arch+GNOME operativo con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque.
 
 ![Gnome-Sinergia](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Gnome-Sinergia.png)
 
-**Incorpora los repositorios nemesis y Chaotic-aur**
+Este script instala y configura un entorno de escritorio GNOME completo en Arch Linux. 
 
-Nemesis_repo (Kiro): repositorio de bootstrap temporal que se usa únicamente para instalar kiro-keyring y kiro-mirrorlist. Una vez instalados esos paquetes, el script reemplaza la línea Server= original por Include = /etc/pacman.d/kiro-mirrorlist, es decir, usa el repo temporal solo como "puente" para obtener la lista de espejos oficial de Kiro.
+Habilita el repositorio multilib.
 
-Chaotic-aur: repositorio binario precompilado de paquetes AUR populares. Se importa su llave PGP, se instalan sus paquetes keyring y mirrorlist directamente vía URL (sin necesidad de agregarlo antes al pacman.conf), y recién después se agrega la sección [chaotic-aur]. Esto acelera muchísimo la instalación de paquetes AUR, ya que evita compilarlos localmente para los que ya están en Chaotic-AUR.
+Configura el repositorio nemesis_repo (Kiro): agrega el repo, importa y firma su clave PGP, instala kiro-keyring y kiro-mirrorlist, y actualiza pacman.conf para usar el mirrorlist real.
 
-Yay viene preinstalado y "activado" por defecto.
+Configura Chaotic-AUR: importa y firma su clave PGP, instala el keyring y mirrorlist del repo, y lo agrega a pacman.conf.
+
+Instala GNOME Shell junto con un conjunto amplio de aplicaciones y componentes del ecosistema GNOME, más herramientas generales del sistema.
+
+Instala YAY (compilándolo desde AUR) y con él agrega stacer-bin más varias extensiones de GNOME Shell.
+
+Configura GRUB: habilita os-prober.
+
+Habilita GDM como display manager.
+
+Limpieza y reinicio: borra la carpeta temporal y ofrece reiniciar (auto-continúa a los 15s).
+
+Aplicaciones/paquetes instalados
+
+Núcleo GNOME:
+
+gnome-shell, gnome-tweaks, gdm, gnome-session, gnome-settings-daemon, gnome-control-center, gnome-shell-extensions, gnome-keyring, gnome-menus
+
+Apps y utilidades de GNOME:
+
+gnome-characters, gnome-backgrounds, gnome-calendar, gnome-clocks, gnome-connections, gnome-font-viewer, gnome-logs, gnome-maps, gnome-remote-desktop, gnome-color-manager, gnome-disk-utility, gnome-system-monitor, gnome-text-editor, gnome-user-docs, gnome-user-share, loupe, sushi, tecla, yelp, baobab, evince, nautilus
+
+Terminal y gestión de archivos:
+
+alacritty (terminal), rygel, tracker3-miners, xdg-desktop-portal, xdg-user-dirs-gtk, gvfs, gvfs-dnssd, gvfs-wsdd, gvfs-afc, gvfs-goa, gvfs-gphoto2, gvfs-mtp, gvfs-nfs, gvfs-smb, grilo-plugins, gnome-terminal-transparency, gnome-browser-connector
+
+Sistema:
+
+amd-ucode, intel-ucode, ntfs-3g, os-prober, pacman-contrib, archlinux-tweak-tool-gtk4, btop, nano
+
+Multimedia:
+
+vlc, vlc-plugins-all
+
+Torrents:
+
+fragments (cliente BitTorrent para GNOME)
+
+Comunicación:
+
+telegram-desktop
+
+Compresión:
+
+file-roller, unrar, p7zip
+
+Navegador y ofimática:
+
+firefox, firefox-i18n-es-ar, libreoffice-fresh-es, hunspell-es_uy
+
+Extensiones GNOME Shell (repos oficiales/Chaotic-AUR):
+
+gnome-shell-extension-arch-update, gnome-shell-extension-dash-to-dock
+
+Fuentes:
+
+ttf-firacode-nerd
+
+Gestión de paquetes:
+
+pamac-aur, yay (compilado desde AUR)
+
+Utilidades (AUR vía yay):
+
+stacer-bin,
+
+Extensiones GNOME Shell adicionales (AUR vía yay):
+
+gnome-shell-extension-dash2dock-lite, gnome-shell-extension-compiz-alike-magic-lamp-effect-git, gnome-shell-extension-compiz-windows-effect-git, gnome-shell-extension-arc-menu-git, gnome-shell-extension-astra-monitor, gnome-shell-extension-burn-my-windows, gnome-shell-extension-coverflow-alt-tab-git
+
+Dependencias de compilación:
+
+base-devel, git
 
  
 
