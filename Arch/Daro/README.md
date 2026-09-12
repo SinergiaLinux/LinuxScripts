@@ -58,30 +58,29 @@ Clonar HitGub con
 
     git clone https://github.com/SinergiaLinux/LinuxScripts
 
+Vamos al siguiente directorio
 
-    cd LinuxScripts
+    cd LinuxScripts/Arch/Daro
 
-    cd Arch
-
-    cd Daro
-
-para listar las carpetas con los distintos escritorios, en este caso voy a optar por Gnome
-
+Para listar las carpetas con los distintos escritorios
+    
     ls
+
+En este caso voy a optar por Gnome
 
     cd Gnome
 
-para listar los scripts
+Para listar los scripts
 
     ls
 
-sh nombredelscrpt.sh por ej. 
+Ejecutamos el scripts sh nombredelscrpt.sh por ej. 
 
     sh gnome-full.sh
 
-escribimos nuestra contraseña de usuario 
+Escribimos nuestra contraseña de usuario e inicia el proceso de postinstalacion
 
-Luego solicita un par de veces mas la contraseña durante la instalacion.
+Luego solicita un par de veces mas la contraseña de nuestro usuario.
 
 Una vez finalizado el script, se reinicira automaticamente el sistema.
 
