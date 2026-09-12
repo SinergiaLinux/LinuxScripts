@@ -62,7 +62,7 @@ Clonar HitGub con
 
 Vamos al siguiente directorio
 
-    cd LinuxScripts/Arch/Daro
+    cd LinuxScripts/Arch/Daro/
 
 Para listar las carpetas con los distintos escritorios
     
