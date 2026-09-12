@@ -223,18 +223,20 @@ base-devel, git
 
 Este script es prácticamente idéntico al anterior, misma estructura, mismos repositorios, mismos paquetes de pacman y AUR, mismas extensiones de plasma con una estética oscura y monocromática como eje central de la personalización. 
 
-Tema global: Breeze Dark, aplicado automáticamente como Look and Feel por defecto.
-
-Iconos: Vortex-Dark-Icons, descargados dinámicamente desde KDE Store — un set de íconos en tonos oscuros/grisáceos, coherente con el resto del sistema.
-
-Konsole con transparencia (Opacity=0.85) sobre un esquema de color basado en Breeze, reforzando la paleta oscura con el efecto Blur de KWin.
-
-Wallpaper "Nexus" y splash "Arch Simple Blue KDE 6", ambos con tonos sobrios que acompañan el conjunto oscuro.
-
-Incluso el ícono del lanzador de aplicaciones se reemplaza por el logo de Arch, integrado al tema de iconos oscuro en vez de quedar como un ícono de color distinto que rompa la paleta.
-
 En conjunto, todo el sistema, terminal, iconos, tema global, splash y wallpaper, se mantiene dentro de una gama de grises/oscuros consistente, evitando acentos de color que compitan entre sí. 
+
 Es la variante más cuidada en términos de cohesión visual monocromática, a diferencia de setups que mezclan temas claros, íconos de colores variados y acentos llamativos.
+
+
+Iconos: usa el tema YAMIS (yamis-icon-theme-git vía AUR) 
+
+Wallpaper: fija "Cold Ripple" de Risto Saukonpää como fondo por defecto.
+
+SDDM: Utiliza el tema monochrome-kde desde GitHub (pwyde/monochrome-kde), lo instala en /usr/share/sddm/themes/monochrome y lo fija como tema activo en /etc/sddm.conf.d/theme.conf.user.
+
+
+
+
 
 
 
