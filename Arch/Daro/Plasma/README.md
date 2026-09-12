@@ -10,11 +10,11 @@ Liviano y rápido: en general consume menos recursos que GNOME, lo que lo hace p
 
 Basado en Qt/KDE Frameworks: usa las librerías Qt en vez de GTK (que usa GNOME), lo que define el aspecto y comportamiento de sus aplicaciones nativas.
 
-Creamos tres scripts post instalacion los cuales son plasma-sinergia, plasma-full y plasma-monocrome, los tres incorporan por defecto los repositorios de Nemesis, Chaotic y Multilib. 
+Creamos tres scripts post instalacion los cuales son **plasma-sinergia**, **plasma-full** y **plasma-monocrome**, los tres incorporan por defecto los repositorios de Nemesis, Chaotic y Multilib. 
 
-Nemesis repo (kiro): fue creado por Erik Dubois, un desarrollador belga bastante conocido en la comunidad Arch por ser el creador original de ArcoLinux, una distribución educativa basada en Arch orientada a enseñar cómo funciona el sistema por dentro. La razon por la cual decidimos que el repositorio inicie por defecto es para que el script pueda instalar Archlinux Tweak Tool, una herramienta muy potente que nos permite configurar el sistema con un par de click, una verdadera navaja suiza. 
+**Nemesis repo (kiro)**: fue creado por Erik Dubois, un desarrollador belga bastante conocido en la comunidad Arch por ser el creador original de ArcoLinux, una distribución educativa basada en Arch orientada a enseñar cómo funciona el sistema por dentro. La razon por la cual decidimos que el repositorio inicie por defecto es para que el script pueda instalar Archlinux Tweak Tool, una herramienta muy potente que nos permite configurar el sistema con un par de click, una verdadera navaja suiza. 
 
-Chaotic-AUR: es un repositorio no oficial de paquetes precompilados para Arch Linux, que automatiza el proceso de compilación de paquetes del AUR.
+**Chaotic-AUR**: es un repositorio no oficial de paquetes precompilados para Arch Linux, que automatiza el proceso de compilación de paquetes del AUR.
 
 La mayoría de los paquetes disponibles en Chaotic-AUR se compilan automáticamente a partir de su respectivo paquete fuente del AUR, y el resultado se distribuye como binario listo para instalar, tal como cualquier paquete oficial de los repos, esto nos permite acceder a aplicaciones que no estan en los repositorios oficiales y poder instalarlas desde el scripts.
 
@@ -30,7 +30,7 @@ Mejora continua de seguridad: el equipo reporta activamente haber detectado y bl
 
 Paquetes especializados no disponibles oficialmente: por ejemplo, ofrece versiones de kernels con parches para dar soporte a drivers NVIDIA compatibles con todos los kernels del repositorio, algo que no siempre está cubierto por los paquetes oficiales de Arch. 
 
-Multilib: es un repositorio oficial de Arch Linux (mantenido por el propio proyecto, no de terceros) que provee paquetes de 32 bits para poder ejecutarlos en un sistema de 64 bits.
+**Multilib**: es un repositorio oficial de Arch Linux (mantenido por el propio proyecto, no de terceros) que provee paquetes de 32 bits para poder ejecutarlos en un sistema de 64 bits.
 
 La razón principal
 
@@ -41,11 +41,11 @@ Casos típicos donde lo necesitás
 Juegos y Steam/Proton: una enorme cantidad de juegos (sobre todo viejos, o vía Wine/Proton) siguen siendo binarios de 32 bits o dependen de librerías de 32 bits.
 Wine: para ejecutar aplicaciones y juegos de Windows, Wine necesita las contrapartes de 32 bits de muchas librerías del sistema, incluso corriendo programas de 64 bits.
 
-Drivers gráficos (NVIDIA/AMD): los drivers propietarios de NVIDIA, por ejemplo, requieren el paquete lib32-nvidia-utils para que las apps de 32 bits puedan usar aceleración gráfica correctamente (algo relevante en tus scripts, ya que instalan Steam-adjacent apps como OBS, VLC, etc., y en la conversación pasada mencionaste drivers).
+Drivers gráficos (NVIDIA/AMD): los drivers propietarios de NVIDIA, por ejemplo, requieren el paquete lib32-nvidia-utils para que las apps de 32 bits puedan usar aceleración gráfica correctamente.
 
 Software heredado (legacy): algunas herramientas viejas de empresas, emuladores, o binarios distribuidos solo en 32 bits.
 
-Yay viene preinstalado y "activado" por defecto
+**Yay**: viene preinstalado y "activado" por defecto.
 
 
 ## PLASMA SINERGIA (plasma-sinergia.sh)
