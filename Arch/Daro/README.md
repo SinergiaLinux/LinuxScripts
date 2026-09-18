@@ -76,7 +76,7 @@ Para listar los scripts
 
     ls
 
-Ejecutamos el scripts sh nombredelscrpt.sh por ej. 
+Ejecutamos el script sh nombredelscript.sh por ej. 
 
     sh gnome-full.sh
 
