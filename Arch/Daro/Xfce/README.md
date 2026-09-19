@@ -15,7 +15,7 @@ Es un repositorio no oficial de paquetes precompilados para Arch Linux, que auto
 
 La mayoría de los paquetes disponibles en Chaotic-AUR se compilan automáticamente a partir de su respectivo paquete fuente del AUR, y el resultado se distribuye como binario listo para instalar, tal como cualquier paquete oficial de los repos, esto nos permite acceder a aplicaciones que no estan en los repositorios oficiales y poder instalarlas desde el scripts.
 
-Principales virtudes
+<ins>Principales virtudes</ins>
 
 Ahorro de tiempo masivo: evita compilar paquetes pesados localmente (kernels personalizados, navegadores, drivers), ya que vienen precompilados — su propio lema es "construyendo paquetes AUR para vos, para que no tengas que hacerlo tú mismo".
 
@@ -53,7 +53,7 @@ Es una versión basica, pensada para quien quiere un Arch+Xfce operativo con las
 
 Es un script de post-instalación para Arch Linux que deja un escritorio XFCE listo para usar. 
 
-Hace lo siguiente:
+<ins>Hace lo siguiente:</ins>
 
 Pacman: hace un respaldo de pacman.conf, activa ILoveCandy y las descargas paralelas, y habilita el repositorio multilib.
 
@@ -75,47 +75,47 @@ xfce4, xfce4-goodies, xfce4-panel-profiles
 Plugins de panel: xfce4-whiskermenu-plugin, xfce4-docklike-plugin, xfce4-windowck-plugin, xfce4-places-plugin
 plank (dock) y ulauncher (lanzador)
 
-Sesión y base del sistema
+<ins>Sesión y base del sistema</ins>
 
 xorg-server, xorg-apps, dbus, python-gobject
 lightdm y lightdm-gtk-greeter
 amd-ucode, intel-ucode, os-prober
 
-Audio y red
+<ins>Audio y red</ins>
 
 pipewire-pulse, wireplumber, pavucontrol
 network-manager-applet
 
-Internet
+<ins>Internet</ins>
 
 firefox (con firefox-i18n-es-ar), chromium, telegram-desktop
 
-Oficina y documentos
+<ins>Oficina y documentos</ins>
 
 libreoffice-fresh-es, hunspell-es_uy, atril (visor de PDF)
 
-Multimedia
+<ins>Multimedia</ins>
 
 vlc, vlc-plugins-all, mpv, audacious
 
-Archivos y compresión
+<ins>Archivos y compresión</ins>
 
 xarchiver, unrar, p7zip, ntfs-3g
 
-Terminal y shell
+<ins>Terminal y shell</ins>
 
 zsh, zsh-completions, terminology, nano, fastfetch, btop
 
-Herramientas de sistema
+<ins>Herramientas de sistema</ins>
 
 gparted, hardinfo2, archlinux-tweak-tool-gtk4, shelly
 
-Desarrollo y AUR
+<ins>Desarrollo y AUR</ins>
 
 base-devel, git, yay
 stacer-bin (desde el AUR, para limpieza y monitoreo)
 
-Repositorios
+<ins>Repositorios</ins>
 
 kiro-keyring y kiro-mirrorlist
 chaotic-keyring y chaotic-mirrorlist
