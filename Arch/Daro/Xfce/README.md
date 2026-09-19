@@ -33,7 +33,7 @@ Es un repositorio oficial de Arch Linux (mantenido por el propio proyecto, no de
 
 Arch Linux es una distribución puramente x86_64 (64 bits) desde hace años. Todo lo que instalás por defecto, el kernel, las librerías del sistema, las apps son de 64 bits. El problema es que todavía existe software de 32 bits que necesita sus propias versiones de las librerías del sistema (glibc, libGL, etc.) para funcionar, y esas versiones de 32 bits no vienen incluidas en la instalación base y multilib provee justamente esas librerías compiladas en 32 bits, para que un sistema de 64 bits pueda ejecutar binarios de 32 bits sin problemas.
 
-Casos típicos donde lo necesitás
+<ins>Casos típicos donde lo necesitás</ins>
 
 Juegos y Steam/Proton: una enorme cantidad de juegos (sobre todo viejos, o vía Wine/Proton) siguen siendo binarios de 32 bits o dependen de librerías de 32 bits. Wine: para ejecutar aplicaciones y juegos de Windows, Wine necesita las contrapartes de 32 bits de muchas librerías del sistema, incluso corriendo programas de 64 bits.
 
@@ -58,8 +58,6 @@ Es un script de post-instalación para Arch Linux que deja un escritorio XFCE li
 Pacman: hace un respaldo de pacman.conf, activa ILoveCandy y las descargas paralelas, y habilita el repositorio multilib.
 
 Repositorios extra: agrega nemesis_repo (Kiro), con su clave PGP, keyring y mirrorlist, y chaotic-aur, con su clave, keyring y mirrorlist.
-
-Paquetes: instala Xorg, XFCE4 con goodies y plugins de panel, LightDM con su greeter, PipeWire, herramientas de red y audio, y microcódigo AMD e Intel. También instala aplicaciones como Firefox, Chromium, LibreOffice en español, VLC, mpv, Telegram, zsh, fastfetch, btop y gparted.
 
 AUR: compila e instala yay y luego stacer-bin.
 
