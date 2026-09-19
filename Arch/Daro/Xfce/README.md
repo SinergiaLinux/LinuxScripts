@@ -69,7 +69,7 @@ Cierre: habilita LightDM, borra ~/LinuxScripts.
 
 **Aplicaciones y paquetes que instala el script**
 
-<u>Escritorio (XFCE)</u>
+<u>Escritorio (XFCE)<u>
 
 xfce4, xfce4-goodies, xfce4-panel-profiles
 Plugins de panel: xfce4-whiskermenu-plugin, xfce4-docklike-plugin, xfce4-windowck-plugin, xfce4-places-plugin
