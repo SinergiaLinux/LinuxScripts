@@ -82,7 +82,7 @@ Ejecutamos el script sh nombredelscript.sh por ej.
 
 Escribimos nuestra contraseña de usuario e inicia el proceso de postinstalacion
 
-Luego solicita un par de veces mas la contraseña de nuestro usuario.
+Durante el proceso solicita varias veces mas la contraseña de nuestro usuario asi que estar atentos.
 
 Una vez finalizado el script, se reinicira automaticamente el sistema.
 
