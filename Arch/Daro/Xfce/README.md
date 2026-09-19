@@ -51,8 +51,21 @@ Como yay no viene instalado por defecto en Arch el script se encarga de "activar
 
 Es una versión basica, pensada para quien quiere un Arch+Xfce operativo con las aplicaciones necesarias para el uso diario con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque.
 
-Es un script de post-instalación que automatiza la configuración de un sistema con entorno Xfce.
+Es un script de post-instalación para Arch Linux que deja un escritorio XFCE listo para usar. 
 
+Hace lo siguiente:
+
+Pacman: hace un respaldo de pacman.conf, activa ILoveCandy y las descargas paralelas, y habilita el repositorio multilib.
+
+Repositorios extra: agrega nemesis_repo (Kiro), con su clave PGP, keyring y mirrorlist, y chaotic-aur, con su clave, keyring y mirrorlist.
+
+Paquetes: instala Xorg, XFCE4 con goodies y plugins de panel, LightDM con su greeter, PipeWire, herramientas de red y audio, y microcódigo AMD e Intel. También instala aplicaciones como Firefox, Chromium, LibreOffice en español, VLC, mpv, Telegram, zsh, fastfetch, btop y gparted.
+
+AUR: compila e instala yay y luego stacer-bin.
+
+GRUB: habilita os-prober para detectar otros sistemas operativos y regenera la configuración.
+
+Cierre: habilita LightDM, borra ~/LinuxScripts.
 
 ## XFCE FULL (xfce-full.sh)
 
