@@ -49,6 +49,10 @@ Como yay no viene instalado por defecto en Arch el script se encarga de "activar
 
 ## XFCE SINERGIA (xfce-sinergia.sh)
 
+Es una versión basica, pensada para quien quiere un Arch+Xfce operativo con las aplicaciones necesarias para el uso diario con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque.
+
+Es un script de post-instalación que automatiza la configuración de un sistema con entorno Xfce.
+
 
 ## XFCE FULL (xfce-full.sh)
 
