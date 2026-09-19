@@ -209,3 +209,102 @@ chaotic-keyring, chaotic-mirrorlist
 
 
 ## XFCE MONOCROMATICO (xfce-monochrome.sh)
+
+Es la versión monocromática del script full: instala XFCE y lo deja en escala de grises, con Conky Hybrid en lugar de Arrakis. Pesa unos 650 KB porque el tema Conky va embebido en base64. 
+
+Hace lo siguiente:
+
+Pacman y repos: respalda pacman.conf, activa ILoveCandy y las descargas paralelas, y habilita multilib, nemesis_repo (Kiro) y chaotic-aur, con sus claves y mirrorlists.
+
+
+
+AUR: compila yay como usuario normal.
+
+Apariencia: aplica el tema Graphite-Dark, transparencia en la terminal (0.85) y modo oscuro en GTK3/GTK4. Descarga los íconos GreyStone y, si falla la descarga, cae a Yaru-Teal. Todo se copia también a /etc/skel.
+
+
+Panel: carga el perfil openSUSE Leap 15.x.
+
+Fondo de pantalla: lo descarga y deja una tarea de un solo uso que lo aplica en el primer login, según el monitor real.
+
+Conky Hybrid: , instala onky-lua-nv (necesario para los anillos con Cairo) e instala el tema en escala de grises. Ajusta las interfaces de red, la batería y los hilos de CPU a la máquina, y lo arranca en cada login.
+
+Cierre: configura LightDM, activa os-prober en GRUB, borra ~/LinuxScripts, muestra el banner de "Sinergia / Comunidad Linuxera" y ofrece reiniciar.
+
+Aplicaciones y paquetes que instala el script
+
+Escritorio (XFCE)
+
+xfce4, xfce4-goodies, xfce4-panel-profiles, xfce4-taskmanager, xfce4-screenshooter
+Plugins de panel: xfce4-whiskermenu-plugin, xfce4-docklike-plugin, xfce4-windowck-plugin, xfce4-places-plugin
+plank (dock), ulauncher (lanzador)
+conky-lua-nv (monitor en el escritorio, del AUR; reemplaza a conky)
+
+Sesión y base del sistema
+
+xorg-server, xorg-apps, dbus, python-gobject
+lightdm, lightdm-gtk-greeter
+amd-ucode, intel-ucode, os-prober
+jq, playerctl, wireless_tools
+xdg-user-dirs, xdg-user-dirs-gtk
+base-devel, git, curl (si falta)
+
+Audio y red
+
+pipewire-pulse, wireplumber, pavucontrol
+network-manager-applet
+
+Internet y comunicación
+
+firefox (con firefox-i18n-es-ar), chromium, telegram-desktop
+transmission-gtk, rustdesk-bin (escritorio remoto)
+
+Oficina y documentos
+
+libreoffice-fresh-es, hunspell-es_uy, atril (visor de PDF), mousepad (editor de texto)
+
+Multimedia y creación
+
+Reproductores: vlc, vlc-plugins-all, mpv, audacious
+Producción: obs-studio, audacity, ardour, kdenlive
+Servidor multimedia: rygel, tracker3-miners
+
+Archivos y compresión
+
+xarchiver, unrar, p7zip, ntfs-3g
+Soporte de dispositivos y red: gvfs, gvfs-afc, gvfs-gphoto2, gvfs-mtp, gvfs-nfs, gvfs-smb, gvfs-dnssd, gvfs-wsdd
+
+Terminal y shell
+
+zsh, zsh-completions, terminology, nano, fastfetch, btop
+
+Herramientas de sistema
+
+gparted, hardinfo2, archlinux-tweak-tool-gtk4, shelly, ventoy
+gnome-boxes (máquinas virtuales)
+
+Temas e íconos
+
+Íconos: papirus-icon-theme, mint-l-icons, mint-x-icons, mint-y-icons, mate-icon-theme-faenza
+GTK: arc-gtk-theme, amber-theme-git, colloid-gtk-theme-git, graphite-gtk-theme-black-normal-git
+
+AUR (con yay)
+
+yay (compilado desde el AUR)
+stacer-bin (limpieza y monitoreo)
+sinergia-dd-burner
+aimp (reproductor de audio)
+iptvnator-bin (reproductor IPTV)
+yaru-colors-icon-theme (íconos Yaru-Teal)
+fetch-git
+
+Repositorios
+
+kiro-keyring, kiro-mirrorlist
+chaotic-keyring, chaotic-mirrorlist
+
+Extras que no son paquetes
+
+Íconos GreyStone: se descargan de Codeberg y se copian a /usr/share/icons.
+Tema Conky Hybrid: va embebido en el script y se instala a mano.
+Fondo de pantalla: se descarga de GitHub.
