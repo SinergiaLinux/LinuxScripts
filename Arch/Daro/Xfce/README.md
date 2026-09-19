@@ -120,5 +120,92 @@ chaotic-keyring y chaotic-mirrorlist
 
 ## XFCE FULL (xfce-full.sh)
 
+Es una versión ampliada del script anterior: además de instalar XFCE, ahora también lo personaliza. 
+
+Hace lo siguiente:
+
+Pacman y repos: respalda pacman.conf, activa ILoveCandy y descargas paralelas, y habilita multilib, nemesis_repo (Kiro) y chaotic-aur, con sus claves y mirrorlists.
+
+Paquetes: instala Xorg, XFCE4 con goodies y plugins de panel, LightDM, PipeWire, y aplicaciones como Firefox, Chromium, LibreOffice, VLC, Telegram, OBS, Audacity, Ardour, Kdenlive, Ventoy, Transmission, GNOME Boxes y RustDesk. También instala varios temas de íconos y GTK.
+
+AUR: compila yay como usuario normal e instala stacer-bin, aimp, iptvnator-bin y otros paquetes.
+
+Apariencia: aplica el tema Graphite-Dark, los íconos Yaru-Teal, transparencia en la terminal y el perfil de panel openSUSE Leap 15.x con el ícono de Arch en el menú. Todo se copia también a /etc/skel, para que lo hereden los usuarios nuevos.
+
+Fondo de pantalla: lo descarga y deja una tarea de un solo uso que lo aplica en el primer login, según el monitor detectado.
+
+Conky Arrakis: incluye el tema embebido en base64, lo instala con sus fuentes y lo arranca en cada login. Una tarea de un solo uso ajusta la interfaz de red en el primer login.
+
+Cierre: habilita LightDM, activa os-prober en GRUB, muestra el banner de "Sinergia / Comunidad Linuxera" y ofrece reiniciar.
+
+Aplicaciones y paquetes que instala el script
+
+Escritorio (XFCE)
+
+xfce4, xfce4-goodies, xfce4-panel-profiles, xfce4-taskmanager, xfce4-screenshooter
+Plugins de panel: xfce4-whiskermenu-plugin, xfce4-docklike-plugin, xfce4-windowck-plugin, xfce4-places-plugin
+plank (dock), ulauncher (lanzador), conky (monitor en el escritorio)
+
+Sesión y base del sistema
+
+xorg-server, xorg-apps, dbus, python-gobject
+lightdm, lightdm-gtk-greeter
+amd-ucode, intel-ucode, os-prober
+jq, playerctl, wireless_tools
+base-devel, git, curl y unzip (si faltan)
+
+Audio y red
+
+pipewire-pulse, wireplumber, pavucontrol
+network-manager-applet
+
+Internet y comunicación
+
+firefox (con firefox-i18n-es-ar), chromium, telegram-desktop
+transmission-gtk, rustdesk-bin (escritorio remoto)
+
+Oficina y documentos
+
+libreoffice-fresh-es, hunspell-es_uy, atril (visor de PDF), mousepad (editor de texto)
+
+Multimedia y creación
+
+Reproductores: vlc, vlc-plugins-all, mpv, audacious
+Producción: obs-studio, audacity, ardour, kdenlive
+Servidor multimedia: rygel, tracker3-miners
+
+Archivos y compresión
+
+xarchiver, unrar, p7zip, ntfs-3g
+Soporte de dispositivos y red: gvfs, gvfs-afc, gvfs-gphoto2, gvfs-mtp, gvfs-nfs, gvfs-smb, gvfs-dnssd, gvfs-wsdd
+
+Terminal y shell
+
+zsh, zsh-completions, terminology, nano, fastfetch, btop
+
+Herramientas de sistema
+
+gparted, hardinfo2, archlinux-tweak-tool-gtk4, shelly, ventoy
+gnome-boxes (máquinas virtuales)
+
+Temas e íconos
+
+Íconos: papirus-icon-theme, mint-l-icons, mint-x-icons, mint-y-icons, mate-icon-theme-faenza
+GTK: arc-gtk-theme, amber-theme-git, colloid-gtk-theme-git, graphite-gtk-theme-black-normal-git
+
+AUR (con yay)
+
+stacer-bin (limpieza y monitoreo)
+sinergia-dd-burner
+aimp (reproductor de audio)
+iptvnator-bin (reproductor IPTV)
+yaru-colors-icon-theme (íconos Yaru-Teal)
+fetch-git
+
+Repositorios
+
+kiro-keyring, kiro-mirrorlist
+chaotic-keyring, chaotic-mirrorlist
+
 
 ## XFCE MONOCROMATICO (xfce-monochrome.sh)
