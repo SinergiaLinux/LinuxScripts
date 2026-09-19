@@ -67,6 +67,59 @@ GRUB: habilita os-prober para detectar otros sistemas operativos y regenera la c
 
 Cierre: habilita LightDM, borra ~/LinuxScripts.
 
+Aplicaciones y paquetes que instala el script
+
+Escritorio (XFCE)
+
+xfce4, xfce4-goodies, xfce4-panel-profiles
+Plugins de panel: xfce4-whiskermenu-plugin, xfce4-docklike-plugin, xfce4-windowck-plugin, xfce4-places-plugin
+plank (dock) y ulauncher (lanzador)
+
+Sesión y base del sistema
+
+xorg-server, xorg-apps, dbus, python-gobject
+lightdm y lightdm-gtk-greeter
+amd-ucode, intel-ucode, os-prober
+
+Audio y red
+
+pipewire-pulse, wireplumber, pavucontrol
+network-manager-applet
+
+Internet
+
+firefox (con firefox-i18n-es-ar), chromium, telegram-desktop
+
+Oficina y documentos
+
+libreoffice-fresh-es, hunspell-es_uy, atril (visor de PDF)
+
+Multimedia
+
+vlc, vlc-plugins-all, mpv, audacious
+
+Archivos y compresión
+
+xarchiver, unrar, p7zip, ntfs-3g
+
+Terminal y shell
+
+zsh, zsh-completions, terminology, nano, fastfetch, btop
+
+Herramientas de sistema
+
+gparted, hardinfo2, archlinux-tweak-tool-gtk4, shelly
+
+Desarrollo y AUR
+
+base-devel, git, yay
+stacer-bin (desde el AUR, para limpieza y monitoreo)
+
+Repositorios
+
+kiro-keyring y kiro-mirrorlist
+chaotic-keyring y chaotic-mirrorlist
+
 ## XFCE FULL (xfce-full.sh)
 
 
