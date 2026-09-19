@@ -3,13 +3,13 @@
 Es un entorno de escritorio conocido por ser ligero, rápido y muy configurable. Está pensado para consumir pocos recursos de memoria y procesador, por lo que funciona muy bien en equipos antiguos o modestos, aunque también es una buena opción en máquinas potentes si se prefiere un entorno sencillo y estabile, con flexibilidad para personalizar la apariencia.
 Su diseño es modular: incluye un gestor de ventanas (Xfwm), un panel personalizable, un gestor de archivos (Thunar), un gestor de configuración y otras herramientas que se pueden usar por separado. Sigue una filosofía tradicional de escritorio, con menús, paneles y ventanas, sin efectos pesados ni cambios bruscos de interfaz.
 
-Creamos tres scripts post instalacion los cuales son xfce-sinergia, xfce-full y xfce-monochrome, los tres incorporan por defecto los repositorios de Nemesis, Chaotic y Multilib.
+Creamos tres scripts post instalacion los cuales son **xfce-sinergia**, **xfce-full** y **xfce-monochrome**, los tres incorporan por defecto los repositorios de Nemesis, Chaotic y Multilib.
 
-Nemesis repo (Kiro)
+**Nemesis repo (Kiro)**
 
 Fue creado por Erik Dubois, un desarrollador belga bastante conocido en la comunidad Arch por ser el creador original de ArcoLinux, una distribución educativa basada en Arch orientada a enseñar cómo funciona el sistema por dentro. La razon por la cual decidimos que el repositorio inicie por defecto es para que el script pueda instalar Archlinux Tweak Tool, una herramienta muy potente que nos permite configurar el sistema con un par de click, una verdadera navaja suiza.
 
-Chaotic-AUR
+**Chaotic-AUR**
 
 Es un repositorio no oficial de paquetes precompilados para Arch Linux, que automatiza el proceso de compilación de paquetes del AUR.
 
@@ -27,7 +27,7 @@ Mejora continua de seguridad: el equipo reporta activamente haber detectado y bl
 
 Paquetes especializados no disponibles oficialmente: por ejemplo, ofrece versiones de kernels con parches para dar soporte a drivers NVIDIA compatibles con todos los kernels del repositorio, algo que no siempre está cubierto por los paquetes oficiales de Arch.
 
-Multilib
+**Multilib**
 
 Es un repositorio oficial de Arch Linux (mantenido por el propio proyecto, no de terceros) que provee paquetes de 32 bits para poder ejecutarlos en un sistema de 64 bits.
 
@@ -41,7 +41,7 @@ Drivers gráficos (NVIDIA/AMD): los drivers propietarios de NVIDIA, por ejemplo,
 
 Software heredado (legacy): algunas herramientas viejas de empresas, emuladores, o binarios distribuidos solo en 32 bits.
 
-Yay
+**Yay**
 
 Es una herramienta que te deja instalar programas en Arch Linux desde el AUR (una especie de "tienda comunitaria" de aplicaciones que la gente sube, pero que no vienen ya armadas, hay que compilarlas).
 
