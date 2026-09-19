@@ -5,11 +5,11 @@ GNOME es un entorno de escritorio (desktop environment) para sistemas Linux/Unix
 
 Creamos tres scripts post instalacion los cuales son **gnome-sinergia**, **gnome-full** y **gnome-monochrome**, los tres incorporan por defecto los repositorios de Nemesis, Chaotic y Multilib.
 
-Nemesis repo (Kiro)
+**Nemesis repo (Kiro)**
 
 Fue creado por Erik Dubois, un desarrollador belga bastante conocido en la comunidad Arch por ser el creador original de ArcoLinux, una distribución educativa basada en Arch orientada a enseñar cómo funciona el sistema por dentro. La razon por la cual decidimos que el repositorio inicie por defecto es para que el script pueda instalar Archlinux Tweak Tool, una herramienta muy potente que nos permite configurar el sistema con un par de click, una verdadera navaja suiza.
 
-Chaotic-AUR
+**Chaotic-AUR**
 
 Es un repositorio no oficial de paquetes precompilados para Arch Linux, que automatiza el proceso de compilación de paquetes del AUR.
 
@@ -27,7 +27,7 @@ Mejora continua de seguridad: el equipo reporta activamente haber detectado y bl
 
 Paquetes especializados no disponibles oficialmente: por ejemplo, ofrece versiones de kernels con parches para dar soporte a drivers NVIDIA compatibles con todos los kernels del repositorio, algo que no siempre está cubierto por los paquetes oficiales de Arch.
 
-Multilib
+**Multilib**
 
 Es un repositorio oficial de Arch Linux (mantenido por el propio proyecto, no de terceros) que provee paquetes de 32 bits para poder ejecutarlos en un sistema de 64 bits.
 
@@ -41,7 +41,7 @@ Drivers gráficos (NVIDIA/AMD): los drivers propietarios de NVIDIA, por ejemplo,
 
 Software heredado (legacy): algunas herramientas viejas de empresas, emuladores, o binarios distribuidos solo en 32 bits.
 
-Yay
+**Yay**
 
 Es una herramienta que te deja instalar programas en Arch Linux desde el AUR (una especie de "tienda comunitaria" de aplicaciones que la gente sube, pero que no vienen ya armadas, hay que compilarlas).
 
