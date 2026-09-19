@@ -46,3 +46,11 @@ Software heredado (legacy): algunas herramientas viejas de empresas, emuladores,
 Es una herramienta que te deja instalar programas en Arch Linux desde el AUR (una especie de "tienda comunitaria" de aplicaciones que la gente sube, pero que no vienen ya armadas, hay que compilarlas).
 
 Como yay no viene instalado por defecto en Arch el script se encarga de "activarlo" por defecto.
+
+## XFCE SINERGIA (xfce-sinergia.sh)
+
+
+## XFCE FULL (xfce-full.sh)
+
+
+## XFCE MONOCROMATICO (xfce-monochrome.sh)
