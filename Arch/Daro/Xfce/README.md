@@ -53,17 +53,17 @@ Es una versión basica, pensada para quien quiere un Arch+Xfce operativo con las
 
 Es un script de post-instalación para Arch Linux que deja un escritorio XFCE listo para usar. 
 
-<ins>Hace lo siguiente:</ins>
+**Hace lo siguiente:**
 
-Pacman: hace un respaldo de pacman.conf, activa ILoveCandy y las descargas paralelas, y habilita el repositorio multilib.
+<ins>Pacman:</ins> hace un respaldo de pacman.conf, activa ILoveCandy y las descargas paralelas, y habilita el repositorio multilib.
 
-Repositorios extra: agrega nemesis_repo (Kiro), con su clave PGP, keyring y mirrorlist, y chaotic-aur, con su clave, keyring y mirrorlist.
+<ins>Repositorios extra:</ins> agrega nemesis_repo (Kiro), con su clave PGP, keyring y mirrorlist, y chaotic-aur, con su clave, keyring y mirrorlist.
 
-AUR: compila e instala yay y luego stacer-bin.
+<ins>AUR:</ins> compila e instala yay y luego stacer-bin.
 
-GRUB: habilita os-prober para detectar otros sistemas operativos y regenera la configuración.
+<ins>GRUB:</ins> habilita os-prober para detectar otros sistemas operativos y regenera la configuración.
 
-Cierre: habilita LightDM, borra ~/LinuxScripts.
+<ins>Cierre:</ins> habilita LightDM, borra ~/LinuxScripts.
 
 **Aplicaciones y paquetes que instala el script**
 
@@ -122,31 +122,31 @@ chaotic-keyring y chaotic-mirrorlist
 
 Es una versión ampliada del script anterior: además de instalar XFCE, ahora también lo personaliza. 
 
-Hace lo siguiente:
+**Hace lo siguiente:**
 
-Pacman y repos: respalda pacman.conf, activa ILoveCandy y descargas paralelas, y habilita multilib, nemesis_repo (Kiro) y chaotic-aur, con sus claves y mirrorlists.
+<ins>Pacman y repos</ins>: respalda pacman.conf, activa ILoveCandy y descargas paralelas, y habilita multilib, nemesis_repo (Kiro) y chaotic-aur, con sus claves y mirrorlists.
 
-Paquetes: instala Xorg, XFCE4 con goodies y plugins de panel, LightDM, PipeWire, y aplicaciones como Firefox, Chromium, LibreOffice, VLC, Telegram, OBS, Audacity, Ardour, Kdenlive, Ventoy, Transmission, GNOME Boxes y RustDesk. También instala varios temas de íconos y GTK.
+<ins>Paquetes:</ins> instala Xorg, XFCE4 con goodies y plugins de panel, LightDM, PipeWire, y aplicaciones como Firefox, Chromium, LibreOffice, VLC, Telegram, OBS, Audacity, Ardour, Kdenlive, Ventoy, Transmission, GNOME Boxes y RustDesk. También instala varios temas de íconos y GTK.
 
-AUR: compila yay como usuario normal e instala stacer-bin, aimp, iptvnator-bin y otros paquetes.
+<ins>AUR:</ins> compila yay como usuario normal e instala stacer-bin, aimp, iptvnator-bin y otros paquetes.
 
-Apariencia: aplica el tema Graphite-Dark, los íconos Yaru-Teal, transparencia en la terminal y el perfil de panel openSUSE Leap 15.x con el ícono de Arch en el menú. Todo se copia también a /etc/skel, para que lo hereden los usuarios nuevos.
+<ins>Apariencia:</ins> aplica el tema Graphite-Dark, los íconos Yaru-Teal, transparencia en la terminal y el perfil de panel openSUSE Leap 15.x con el ícono de Arch en el menú. Todo se copia también a /etc/skel, para que lo hereden los usuarios nuevos.
 
-Fondo de pantalla: lo descarga y deja una tarea de un solo uso que lo aplica en el primer login, según el monitor detectado.
+<ins>Fondo de pantalla:</ins> lo descarga y deja una tarea de un solo uso que lo aplica en el primer login, según el monitor detectado.
 
-Conky Arrakis: incluye el tema embebido en base64, lo instala con sus fuentes y lo arranca en cada login. Una tarea de un solo uso ajusta la interfaz de red en el primer login.
+<ins>Conky Arrakis:</ins> incluye el tema embebido en base64, lo instala con sus fuentes y lo arranca en cada login. Una tarea de un solo uso ajusta la interfaz de red en el primer login.
 
-Cierre: habilita LightDM, activa os-prober en GRUB, muestra el banner de "Sinergia / Comunidad Linuxera" y ofrece reiniciar.
+<ins>Cierre:</ins> habilita LightDM, activa os-prober en GRUB, muestra el banner de "Sinergia / Comunidad Linuxera" y ofrece reiniciar.
 
-Aplicaciones y paquetes que instala el script
+**Aplicaciones y paquetes que instala el script**
 
-Escritorio (XFCE)
+<ins>Escritorio (XFCE)</ins>
 
 xfce4, xfce4-goodies, xfce4-panel-profiles, xfce4-taskmanager, xfce4-screenshooter
 Plugins de panel: xfce4-whiskermenu-plugin, xfce4-docklike-plugin, xfce4-windowck-plugin, xfce4-places-plugin
 plank (dock), ulauncher (lanzador), conky (monitor en el escritorio)
 
-Sesión y base del sistema
+<ins>Sesión y base del sistema</ins>
 
 xorg-server, xorg-apps, dbus, python-gobject
 lightdm, lightdm-gtk-greeter
@@ -154,46 +154,50 @@ amd-ucode, intel-ucode, os-prober
 jq, playerctl, wireless_tools
 base-devel, git, curl y unzip (si faltan)
 
-Audio y red
+<ins>Audio y red</ins>
 
 pipewire-pulse, wireplumber, pavucontrol
 network-manager-applet
 
-Internet y comunicación
+<ins>Internet y comunicación</ins>
 
 firefox (con firefox-i18n-es-ar), chromium, telegram-desktop
 transmission-gtk, rustdesk-bin (escritorio remoto)
 
-Oficina y documentos
+<ins>Oficina y documentos</ins>
 
 libreoffice-fresh-es, hunspell-es_uy, atril (visor de PDF), mousepad (editor de texto)
 
-Multimedia y creación
+<ins>Multimedia y creación</ins>
 
 Reproductores: vlc, vlc-plugins-all, mpv, audacious
 Producción: obs-studio, audacity, ardour, kdenlive
 Servidor multimedia: rygel, tracker3-miners
 
-Archivos y compresión
+<ins>Archivos y compresión</ins>
 
 xarchiver, unrar, p7zip, ntfs-3g
 Soporte de dispositivos y red: gvfs, gvfs-afc, gvfs-gphoto2, gvfs-mtp, gvfs-nfs, gvfs-smb, gvfs-dnssd, gvfs-wsdd
 
-Terminal y shell
+<ins>Terminal y shell</ins>
 
 zsh, zsh-completions, terminology, nano, fastfetch, btop
 
-Herramientas de sistema
+<ins>Herramientas de sistema</ins>
 
 gparted, hardinfo2, archlinux-tweak-tool-gtk4, shelly, ventoy
 gnome-boxes (máquinas virtuales)
 
-Temas e íconos
+<ins>Herramientas de sistema</ins>
+
+<ins>Herramientas de sistema</ins>
+
+<ins>Temas e íconos</ins>
 
 Íconos: papirus-icon-theme, mint-l-icons, mint-x-icons, mint-y-icons, mate-icon-theme-faenza
 GTK: arc-gtk-theme, amber-theme-git, colloid-gtk-theme-git, graphite-gtk-theme-black-normal-git
 
-AUR (con yay)
+<ins>AUR (con yay)</ins>
 
 stacer-bin (limpieza y monitoreo)
 sinergia-dd-burner
@@ -202,7 +206,7 @@ iptvnator-bin (reproductor IPTV)
 yaru-colors-icon-theme (íconos Yaru-Teal)
 fetch-git
 
-Repositorios
+<ins>Repositorios</ins>
 
 kiro-keyring, kiro-mirrorlist
 chaotic-keyring, chaotic-mirrorlist
@@ -212,35 +216,35 @@ chaotic-keyring, chaotic-mirrorlist
 
 Es la versión monocromática del script full: instala XFCE y lo deja en escala de grises, con Conky Hybrid en lugar de Arrakis. Pesa unos 650 KB porque el tema Conky va embebido en base64. 
 
-Hace lo siguiente:
+**Hace lo siguiente:**
 
-Pacman y repos: respalda pacman.conf, activa ILoveCandy y las descargas paralelas, y habilita multilib, nemesis_repo (Kiro) y chaotic-aur, con sus claves y mirrorlists.
-
-
-
-AUR: compila yay como usuario normal.
-
-Apariencia: aplica el tema Graphite-Dark, transparencia en la terminal (0.85) y modo oscuro en GTK3/GTK4. Descarga los íconos GreyStone y, si falla la descarga, cae a Yaru-Teal. Todo se copia también a /etc/skel.
+<ins>Pacman y repos:</ins> respalda pacman.conf, activa ILoveCandy y las descargas paralelas, y habilita multilib, nemesis_repo (Kiro) y chaotic-aur, con sus claves y mirrorlists.
 
 
-Panel: carga el perfil openSUSE Leap 15.x.
 
-Fondo de pantalla: lo descarga y deja una tarea de un solo uso que lo aplica en el primer login, según el monitor real.
+<ins>AUR:</ins> compila yay como usuario normal.
 
-Conky Hybrid: , instala onky-lua-nv (necesario para los anillos con Cairo) e instala el tema en escala de grises. Ajusta las interfaces de red, la batería y los hilos de CPU a la máquina, y lo arranca en cada login.
+<ins>Apariencia:</ins> aplica el tema Graphite-Dark, transparencia en la terminal (0.85) y modo oscuro en GTK3/GTK4. Descarga los íconos GreyStone y, si falla la descarga, cae a Yaru-Teal. Todo se copia también a /etc/skel.
 
-Cierre: configura LightDM, activa os-prober en GRUB, borra ~/LinuxScripts, muestra el banner de "Sinergia / Comunidad Linuxera" y ofrece reiniciar.
 
-Aplicaciones y paquetes que instala el script
+<ins>Panel:</ins> carga el perfil openSUSE Leap 15.x.
 
-Escritorio (XFCE)
+<ins>Fondo de pantalla:</ins> lo descarga y deja una tarea de un solo uso que lo aplica en el primer login, según el monitor real.
+
+<ins>Conky Hybrid:</ins> instala onky-lua-nv (necesario para los anillos con Cairo) e instala el tema en escala de grises. Ajusta las interfaces de red, la batería y los hilos de CPU a la máquina, y lo arranca en cada login.
+
+<ins>Cierre:</ins> configura LightDM, activa os-prober en GRUB, borra ~/LinuxScripts, muestra el banner de "Sinergia / Comunidad Linuxera" y ofrece reiniciar.
+
+**Aplicaciones y paquetes que instala el script**
+
+<ins>Escritorio (XFCE)</ins>
 
 xfce4, xfce4-goodies, xfce4-panel-profiles, xfce4-taskmanager, xfce4-screenshooter
 Plugins de panel: xfce4-whiskermenu-plugin, xfce4-docklike-plugin, xfce4-windowck-plugin, xfce4-places-plugin
 plank (dock), ulauncher (lanzador)
 conky-lua-nv (monitor en el escritorio, del AUR; reemplaza a conky)
 
-Sesión y base del sistema
+<ins>Sesión y base del sistema</ins>
 
 xorg-server, xorg-apps, dbus, python-gobject
 lightdm, lightdm-gtk-greeter
@@ -249,46 +253,46 @@ jq, playerctl, wireless_tools
 xdg-user-dirs, xdg-user-dirs-gtk
 base-devel, git, curl (si falta)
 
-Audio y red
+<ins>Audio y red</ins>
 
 pipewire-pulse, wireplumber, pavucontrol
 network-manager-applet
 
-Internet y comunicación
+<ins>Internet y comunicación</ins>
 
 firefox (con firefox-i18n-es-ar), chromium, telegram-desktop
 transmission-gtk, rustdesk-bin (escritorio remoto)
 
-Oficina y documentos
+<ins>Oficina y documentos</ins>
 
 libreoffice-fresh-es, hunspell-es_uy, atril (visor de PDF), mousepad (editor de texto)
 
-Multimedia y creación
+<ins>Multimedia y creación</ins>
 
 Reproductores: vlc, vlc-plugins-all, mpv, audacious
 Producción: obs-studio, audacity, ardour, kdenlive
 Servidor multimedia: rygel, tracker3-miners
 
-Archivos y compresión
+<ins>Archivos y compresión</ins>
 
 xarchiver, unrar, p7zip, ntfs-3g
 Soporte de dispositivos y red: gvfs, gvfs-afc, gvfs-gphoto2, gvfs-mtp, gvfs-nfs, gvfs-smb, gvfs-dnssd, gvfs-wsdd
 
-Terminal y shell
+<ins>Terminal y shell</ins>
 
 zsh, zsh-completions, terminology, nano, fastfetch, btop
 
-Herramientas de sistema
+<ins>Herramientas de sistema</ins>
 
 gparted, hardinfo2, archlinux-tweak-tool-gtk4, shelly, ventoy
 gnome-boxes (máquinas virtuales)
 
-Temas e íconos
+<ins>Temas e íconos</ins>
 
 Íconos: papirus-icon-theme, mint-l-icons, mint-x-icons, mint-y-icons, mate-icon-theme-faenza
 GTK: arc-gtk-theme, amber-theme-git, colloid-gtk-theme-git, graphite-gtk-theme-black-normal-git
 
-AUR (con yay)
+<ins>AUR (con yay)</ins>
 
 yay (compilado desde el AUR)
 stacer-bin (limpieza y monitoreo)
@@ -298,12 +302,12 @@ iptvnator-bin (reproductor IPTV)
 yaru-colors-icon-theme (íconos Yaru-Teal)
 fetch-git
 
-Repositorios
+<ins>Repositorios</ins>
 
 kiro-keyring, kiro-mirrorlist
 chaotic-keyring, chaotic-mirrorlist
 
-Extras que no son paquetes
+<ins>Extras que no son paquetes</ins>
 
 Íconos GreyStone: se descargan de Codeberg y se copian a /usr/share/icons.
 Tema Conky Hybrid: va embebido en el script y se instala a mano.
