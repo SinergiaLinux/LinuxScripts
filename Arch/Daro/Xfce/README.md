@@ -218,7 +218,10 @@ chaotic-keyring, chaotic-mirrorlist
 
 ## XFCE MONOCROMATICO (xfce-monochrome.sh)
 
-Es la versión monocromática del script full: instala XFCE y lo deja en escala de grises, con Conky Hybrid en lugar de Arrakis. Pesa unos 650 KB porque el tema Conky va embebido en base64. 
+Es la versión monocromática del script full: instala XFCE y lo deja en escala de grises, con Conky Hybrid en lugar de Arrakis. Pesa unos 650 KB porque el tema Conky va embebido en base64.
+
+
+![Xfce-Monocromatico](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Xfce-Monocromatico.png)
 
 **Hace lo siguiente:**
 
