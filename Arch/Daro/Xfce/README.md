@@ -51,7 +51,7 @@ Como yay no viene instalado por defecto en Arch el script se encarga de "activar
 
 Es una versión basica, pensada para quien quiere un Arch+Xfce operativo con las aplicaciones necesarias para el uso diario con acceso a Chaotic-AUR y AUR habilitado desde el primer arranque.
 
-https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Xfce-Sinergia.png
+![Xfce-Sinergia](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Xfce-Sinergia.png)
 
 Es un script de post-instalación para Arch Linux que deja un escritorio XFCE listo para usar. 
 
