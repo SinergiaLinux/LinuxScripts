@@ -93,8 +93,3 @@ Una vez finalizado el script, se reinicira automaticamente el sistema.
 
 ## A disfrutar de esta maravillosa Distro llamada ArchLinux 
 
-
-
-### Paquetes Instalados
-
-
