@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # ==========================================
@@ -123,8 +122,68 @@ makepkg -si --noconfirm
 cd ..
 rm -rf yay
 
+# Las extensiones de GNOME ya NO se instalan desde AUR (ver sección 5.1)
 echo "==> Instalando paquetes adicionales..."
-yay -S stacer-bin gnome-shell-extension-dash2dock-lite gnome-shell-extension-compiz-alike-magic-lamp-effect-git gnome-shell-extension-compiz-windows-effect-git gnome-shell-extension-arc-menu-git gnome-shell-extension-astra-monitor gnome-shell-extension-burn-my-windows gnome-shell-extension-coverflow-alt-tab-git sinergia-dd-burner aimp iptvnator-bin yaru-colors-icon-theme fetch-git gapless --noconfirm
+yay -S stacer-bin sinergia-dd-burner iptvnator-bin yaru-colors-icon-theme fetch-git gapless --noconfirm
+
+
+# ==========================================
+# 5.1 INSTALACIÓN DE EXTENSIONES DESDE EXTENSIONS.GNOME.ORG
+# ==========================================
+echo "==> Instalando extensiones desde extensions.gnome.org..."
+sudo pacman -S --needed jq unzip curl --noconfirm
+
+SHELL_VER=$(gnome-shell --version | grep -oE '[0-9]+' | head -n1)
+EXT_DIR="$HOME/.local/share/gnome-shell/extensions"
+SYS_EXT_DIR="/usr/share/gnome-shell/extensions"
+mkdir -p "$EXT_DIR"
+
+echo "==> Versión de GNOME Shell detectada: ${SHELL_VER:-desconocida}"
+
+# Extensiones a descargar (dash-to-dock y arch-update siguen viniendo de pacman)
+EGO_EXTENSIONS=(
+    "compiz-alike-magic-lamp-effect@hermes83.github.com"
+    "compiz-windows-effect@hermes83.github.com"
+    "arcmenu@arcmenu.com"
+    "monitor@astraext.github.io"
+    "burn-my-windows@schneegans.github.com"
+    "CoverflowAltTab@palatis.blogspot.com"
+    "dash2dock-lite@icedman.github.com"
+    "desktop-cube@schneegans.github.com"
+)
+
+install_ego_extension() {
+    local uuid="$1" info dl tmp
+    info=$(curl -fsSL "https://extensions.gnome.org/extension-info/?uuid=${uuid}&shell_version=${SHELL_VER}") \
+        || { echo "!! No se pudo consultar $uuid"; return 1; }
+    dl=$(echo "$info" | jq -r '.download_url // empty' 2>/dev/null)
+    if [ -z "$dl" ]; then
+        echo "!! $uuid no tiene versión compatible con GNOME Shell $SHELL_VER, se omite."
+        return 1
+    fi
+    tmp=$(mktemp --suffix=.zip)
+    curl -fsSL -o "$tmp" "https://extensions.gnome.org${dl}" || { rm -f "$tmp"; echo "!! Falló la descarga de $uuid"; return 1; }
+    rm -rf "${EXT_DIR:?}/$uuid"
+    mkdir -p "$EXT_DIR/$uuid"
+    unzip -qo "$tmp" -d "$EXT_DIR/$uuid"
+    rm -f "$tmp"
+    [ -d "$EXT_DIR/$uuid/schemas" ] && glib-compile-schemas "$EXT_DIR/$uuid/schemas"
+    echo "==> OK: $uuid"
+}
+
+for uuid in "${EGO_EXTENSIONS[@]}"; do
+    install_ego_extension "$uuid"
+done
+
+# gsettings para extensiones instaladas en ~/.local necesita indicar dónde está el esquema
+# uso: ext_gset <uuid> <schema> <clave> <valor>
+ext_gset() {
+    if [ ! -d "$EXT_DIR/$1/schemas" ]; then
+        echo "!! Se omite ajuste de $1 (extensión no instalada)."
+        return 0
+    fi
+    gsettings --schemadir "$EXT_DIR/$1/schemas" set "$2" "$3" "$4"
+}
 
 
 # ==========================================
@@ -173,6 +232,10 @@ gsettings set org.gnome.desktop.interface icon-theme 'Yaru-Deepblue'
 # 6.4 Mostrar botones de Minimizar, Maximizar y Cerrar en las ventanas
 gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 
+# 6.4.1 Configurar 4 áreas de trabajo fijas (necesarias para el cubo de escritorio)
+gsettings set org.gnome.mutter dynamic-workspaces false
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 4
+
 # 6.5 Activar transparencia por defecto en GNOME Terminal
 PROFILE_ID=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")
 if [ -n "$PROFILE_ID" ]; then
@@ -182,16 +245,27 @@ if [ -n "$PROFILE_ID" ]; then
 fi
 
 # 6.6 Habilitar extensiones de GNOME por defecto
-EXTENSIONS=(
+# (solo se habilitan las que realmente quedaron instaladas)
+WANTED_EXTENSIONS=(
     "compiz-alike-magic-lamp-effect@hermes83.github.com"
     "compiz-windows-effect@hermes83.github.com"
     "arcmenu@arcmenu.com"
     "monitor@astraext.github.io"
     "burn-my-windows@schneegans.github.com"
     "CoverflowAltTab@palatis.blogspot.com"
+    "desktop-cube@schneegans.github.com"
     "arch-update@RaphaelRochet"
     "dash-to-dock@micxgx.gmail.com"
 )
+
+EXTENSIONS=()
+for uuid in "${WANTED_EXTENSIONS[@]}"; do
+    if [ -d "$EXT_DIR/$uuid" ] || [ -d "$SYS_EXT_DIR/$uuid" ]; then
+        EXTENSIONS+=("$uuid")
+    else
+        echo "!! $uuid no está instalada, no se habilitará."
+    fi
+done
 
 # Convertir la lista a formato array de dconf/gsettings
 EXT_LIST=$(printf "'%s', " "${EXTENSIONS[@]}")
@@ -202,13 +276,13 @@ gsettings set org.gnome.shell enabled-extensions "$EXT_LIST"
 
 
 # ArcMenu: Atajo Ctrl+Espacio e icono de Arch en celeste
-gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey "['<Control>space']"
-gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey-overlay-key-enabled false
-gsettings set org.gnome.shell.extensions.arcmenu menu-button-icon 'resource:///org/gnome/shell/extensions/arcmenu/icons/scalable/actions/distro-arch-symbolic.svg'
-gsettings set org.gnome.shell.extensions.arcmenu override-menu-button-color true
-gsettings set org.gnome.shell.extensions.arcmenu menu-button-color 'rgb(0,186,255)'
+ext_gset "arcmenu@arcmenu.com" org.gnome.shell.extensions.arcmenu arcmenu-hotkey "['<Control>space']"
+ext_gset "arcmenu@arcmenu.com" org.gnome.shell.extensions.arcmenu arcmenu-hotkey-overlay-key-enabled false
+ext_gset "arcmenu@arcmenu.com" org.gnome.shell.extensions.arcmenu menu-button-icon 'resource:///org/gnome/shell/extensions/arcmenu/icons/scalable/actions/distro-arch-symbolic.svg'
+ext_gset "arcmenu@arcmenu.com" org.gnome.shell.extensions.arcmenu override-menu-button-color true
+ext_gset "arcmenu@arcmenu.com" org.gnome.shell.extensions.arcmenu menu-button-color 'rgb(0,186,255)'
 
-# Dash to Dock: Tamaño de íconos a 28px y opacidad dinámica
+# Dash to Dock: Tamaño de íconos a 28px y opacidad dinámica (viene de pacman)
 gsettings set org.gnome.shell.extensions.dash-to-dock icon-size-fixed true
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 28
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode 'DYNAMIC'
@@ -223,7 +297,7 @@ fire-enable-effect=true
 hexagon-enable-effect=true
 matrix-enable-effect=true
 EOF
-gsettings set org.gnome.shell.extensions.burn-my-windows active-profile "$BMW_PROFILE_FILE"
+ext_gset "burn-my-windows@schneegans.github.com" org.gnome.shell.extensions.burn-my-windows active-profile "$BMW_PROFILE_FILE"
 
 # Guardar ajustes por defecto en dconf del sistema (Garantiza que persistan)
 sudo mkdir -p /etc/dconf/db/local.d/
@@ -243,6 +317,10 @@ icon-theme=\"Yaru-Deepblue\"
 
 [org/gnome/desktop/wm/preferences]
 button-layout=\"appmenu:minimize,maximize,close\"
+num-workspaces=4
+
+[org/gnome/mutter]
+dynamic-workspaces=false
 
 [org/gnome/shell/extensions/arcmenu]
 arcmenu-hotkey=[\"<Control>space\"]
@@ -289,7 +367,8 @@ echo " Display manager configurado: GDM"
 echo " Entorno de escritorio: GNOME Shell"
 echo " Extensiones: Dash to Dock, Arc Menu, Burn My Windows,"
 echo "              Compiz Magic Lamp, Coverflow Alt-Tab,"
-echo "              Astra Monitor"
+echo "              Astra Monitor, Desktop Cube"
+echo " Áreas de trabajo: 4 (fijas)"
 echo " Terminal: Gnome Terminal"
 echo " Gestor de archivos: Nautilus"
 echo " Repositorios activos: kiro (nemesis_repo) + chaotic-aur"
