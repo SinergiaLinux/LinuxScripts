@@ -73,65 +73,65 @@ Habilita GDM como display manager.
 
 Limpieza y reinicio: borra la carpeta temporal y ofrece reiniciar (auto-continúa a los 15s).
 
-Aplicaciones/paquetes instalados
+**Aplicaciones/paquetes instalados**
 
-Núcleo GNOME:
+<ins>Núcleo GNOME:</ins>
 
 gnome-shell, gnome-tweaks, gdm, gnome-session, gnome-settings-daemon, gnome-control-center, gnome-shell-extensions, gnome-keyring, gnome-menus
 
-Apps y utilidades de GNOME:
+<ins>Apps y utilidades de GNOME:</ins>
 
 gnome-characters, gnome-backgrounds, gnome-calendar, gnome-clocks, gnome-connections, gnome-font-viewer, gnome-logs, gnome-maps, gnome-remote-desktop, gnome-color-manager, gnome-disk-utility, gnome-system-monitor, gnome-text-editor, gnome-user-docs, gnome-user-share, loupe, sushi, tecla, yelp, baobab, evince, nautilus
 
-Terminal y gestión de archivos:
+<ins>Terminal y gestión de archivos:</ins>
 
 alacritty (terminal), rygel, tracker3-miners, xdg-desktop-portal, xdg-user-dirs-gtk, gvfs, gvfs-dnssd, gvfs-wsdd, gvfs-afc, gvfs-goa, gvfs-gphoto2, gvfs-mtp, gvfs-nfs, gvfs-smb, grilo-plugins, gnome-terminal-transparency, gnome-browser-connector
 
-Sistema:
+<ins>Sistema:</ins>
 
 amd-ucode, intel-ucode, ntfs-3g, os-prober, pacman-contrib, archlinux-tweak-tool-gtk4, btop, nano
 
-Multimedia:
+<ins>Multimedia:</ins>
 
 vlc, vlc-plugins-all
 
-Torrents:
+<ins>Torrents:</ins>
 
 fragments (cliente BitTorrent para GNOME)
 
-Comunicación:
+<ins>Comunicación:</ins>
 
 telegram-desktop
 
-Compresión:
+<ins>Compresión:</ins>
 
 file-roller, unrar, p7zip
 
-Navegador y ofimática:
+<ins>Navegador y ofimática:</ins>
 
 firefox, firefox-i18n-es-ar, libreoffice-fresh-es, hunspell-es_uy
 
-Extensiones GNOME Shell (repos oficiales/Chaotic-AUR):
+<ins>Extensiones GNOME Shell (repos oficiales/Chaotic-AUR):</ins>
 
 gnome-shell-extension-arch-update, gnome-shell-extension-dash-to-dock
 
-Fuentes:
+<ins>Fuentes:</ins>
 
 ttf-firacode-nerd
 
-Gestión de paquetes:
+<ins>Gestión de paquetes:</ins>
 
 pamac-aur, yay (compilado desde AUR)
 
-Utilidades (AUR vía yay):
+<ins>Utilidades (AUR vía yay):</ins>
 
 stacer-bin,
 
-Extensiones GNOME Shell adicionales (AUR vía yay):
+<ins>Extensiones GNOME Shell adicionales (AUR vía yay):</ins>
 
 gnome-shell-extension-dash2dock-lite, gnome-shell-extension-compiz-alike-magic-lamp-effect-git, gnome-shell-extension-compiz-windows-effect-git, gnome-shell-extension-arc-menu-git, gnome-shell-extension-astra-monitor, gnome-shell-extension-burn-my-windows, gnome-shell-extension-coverflow-alt-tab-git
 
-Dependencias de compilación:
+<ins>Dependencias de compilación:</ins>
 
 base-devel, git
 
