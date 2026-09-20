@@ -124,6 +124,8 @@ chaotic-keyring y chaotic-mirrorlist
 
 Es una versión ampliada del script anterior: además de instalar XFCE, ahora también lo personaliza. 
 
+![Xfce-Full](https://raw.githubusercontent.com/elcuchy/Sinergia/refs/heads/main/Sinergia/images/Xfce-Full.png)
+
 **Hace lo siguiente:**
 
 <ins>Pacman y repos</ins>: respalda pacman.conf, activa ILoveCandy y descargas paralelas, y habilita multilib, nemesis_repo (Kiro) y chaotic-aur, con sus claves y mirrorlists.
