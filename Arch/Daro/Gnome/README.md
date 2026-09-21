@@ -200,6 +200,7 @@ Un detalle: hardinfo2, pamac-aur, rustdesk-bin y archlinux-tweak-tool-gtk4 no es
 Atajos de teclado para lanzadores de aplicaciones: 
 
 Menu de gnome o lanzador de aplicaciones con la telca super o tambien conocida como la tecla del "tio bill"
+
 Lanzador de aplicaciones Arc Menu con la combinacion de teclas Ctrl+Espacio
 
 
