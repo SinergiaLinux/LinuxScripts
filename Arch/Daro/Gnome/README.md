@@ -149,58 +149,58 @@ Configura las descargas paralelas y ILoveCandy en pacman, mejorando la experienc
 
 Importa correctamente las llaves PGP de los repos de terceros (Kiro/nemesis_repo y Chaotic-AUR)
 
-**Aplicaciones instaladas (pacman)**
+**Aplicaciones instaladas**
 
-Entorno de escritorio y base GNOME: gnome-shell, gdm, nautilus, gnome-control-center, gnome-tweaks, gnome-terminal, gnome-text-editor, gnome-system-monitor, gnome-disk-utility, gnome-calculator, gnome-calendar, gnome-clocks, gnome-maps, gnome-characters, gnome-logs, gnome-remote-desktop, gnome-connections, entre otros componentes estándar de GNOME.
 
-Utilidades del sistema: baobab (analizador de disco), gparted, dconf-editor, hardinfo2, fastfetch, btop, pacman-contrib, archlinux-tweak-tool-gtk4, ntfs-3g, os-prober.
+Escritorio GNOME (pacman)
 
-Multimedia y creatividad: vlc + plugins, mpv, obs-studio (grabación/streaming), audacity (audio), ardour (producción de audio), kdenlive (edición de video), decibels, snapshot (cámara).
+gnome-shell, gnome-tweaks, gdm, gnome-session, gnome-control-center, gnome-settings-daemon
+Nautilus (archivos), gnome-terminal-transparency, Alacritty, gnome-text-editor, gedit
+Utilidades: Calculadora, Calendario, Relojes, Mapas, Caracteres, Registros, Monitor del sistema, Discos, Visor de fuentes, Baobab, Conexiones, Boxes, Yelp, Snapshot, Decibels, Tecla
+Visores: Loupe (imágenes), Evince (PDF), Sushi (vista previa)
+Extras GNOME: gnome-browser-connector, gnome-shell-extensions, gnome-backgrounds, gnome-color-manager, gnome-keyring, gnome-remote-desktop, gnome-user-docs, gnome-user-share, dconf-editor, tracker3-miners, grilo-plugins, rygel
 
-Productividad y oficina: libreoffice-fresh-es (con idioma español), hunspell-es_uy (corrector en español uruguayo), evince (lector PDF), file-roller/unrar/p7zip (compresión).
+Multimedia y productividad
 
-Navegación y comunicación: firefox + idioma español, telegram-desktop, rustdesk-bin (acceso remoto), gnome-browser-connector.
+VLC (con todos los plugins), mpv
+OBS Studio, Audacity, Ardour, Kdenlive
+Firefox (con idioma es-AR), LibreOffice Fresh (es), hunspell-es_uy
+Telegram Desktop, Fragments (torrents)
+RustDesk (escritorio remoto)
 
-Temas visuales: papirus-icon-theme, mint-l/x/y-icons, mate-icon-theme-faenza (variedad de iconos para personalizar).
+Sistema y herramientas
 
-Grabadora/quemado de discos: ventoy (USB booteables). 
+GParted, Ventoy, btop, fastfetch, hardinfo2, nano
+File Roller, unrar, p7zip, ntfs-3g, os-prober
+pamac-aur, archlinux-tweak-tool-gtk4, pacman-contrib
+amd-ucode e intel-ucode, xorg-xrandr
+base-devel, git, jq, unzip, curl
+Soporte de archivos: gvfs (con afc, goa, gphoto2, mtp, nfs, smb, dnssd, wsdd), xdg-desktop-portal, xdg-user-dirs-gtk
 
-Gestor de paquetes gráfico: pamac-aur.
+Temas, iconos y fuentes
 
-Tipografía: ttf-firacode-nerd (fuente para terminal con íconos).
+Papirus, Mint-L, Mint-X, Mint-Y, Faenza (mate-icon-theme-faenza)
+ttf-firacode-nerd
 
-Firmware/microcódigo: amd-ucode, intel-ucode (soporte para ambas arquitecturas de CPU).
+Extensiones de GNOME desde pacman
 
-**Aplicaciones instaladas vía AUR (con yay)**
+Dash to Dock, Arch Update
 
-stacer-bin – monitor/optimizador del sistema con interfaz gráfica.
+AUR (vía yay)
 
-gnome-shell-extension-dash2dock-lite – dock alternativo liviano.
+yay (se compila primero)
+Stacer, Sinergia DD Burner, IPTVnator, Yaru Colors Icon Theme (incluye Yaru-Deepblue), fetch-git, Gapless
 
-gnome-shell-extension-compiz-alike-magic-lamp-effect-git – efecto "lámpara mágica" al minimizar ventanas (estilo Compiz).
+Extensiones desde extensions.gnome.org
 
-gnome-shell-extension-compiz-windows-effect-git – efectos de ventana estilo Compiz.
+Magic Lamp Effect, Compiz Windows Effect, ArcMenu, Astra Monitor, Burn My Windows, Coverflow Alt-Tab, Dash2Dock Lite, Desktop Cube
 
-gnome-shell-extension-arc-menu-git – menú de aplicaciones estilo Windows/clásico.
+Un detalle: hardinfo2, pamac-aur, rustdesk-bin y archlinux-tweak-tool-gtk4 no están en los repos oficiales de Arch, así que dependen de Chaotic-AUR o de Kiro para instalarse.
 
-gnome-shell-extension-astra-monitor – monitor de recursos del sistema en la barra superior.
+Atajos de teclado para lanzadores de aplicaciones: 
 
-gnome-shell-extension-burn-my-windows – efectos visuales al cerrar ventanas (fuego, matrix, hexágono, etc.).
-
-gnome-shell-extension-coverflow-alt-tab-git – alternador de ventanas estilo "coverflow" (como iTunes viejo).
-
-sinergia-dd-burner – (grabador de discos).
-
-aimp – reproductor de música.
-
-iptvnator-bin – reproductor de IPTV.
-
-yaru-colors-icon-theme – variantes de colores del tema de iconos Yaru (Ubuntu).
-
-fetch-git – herramienta tipo neofetch.
-
-gapless – reproductor de música simple.
-
+Menu de gnome o lanzador de aplicaciones con la telca super o tambien conocida como la tecla del "tio bill"
+Lanzador de aplicaciones Arc Menu con la combinacion de teclas Ctrl+Espacio
 
 
 
