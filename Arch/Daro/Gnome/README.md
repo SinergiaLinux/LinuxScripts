@@ -195,7 +195,7 @@ Extensiones desde extensions.gnome.org
 
 Magic Lamp Effect, Compiz Windows Effect, ArcMenu, Astra Monitor, Burn My Windows, Coverflow Alt-Tab, Dash2Dock Lite, Desktop Cube
 
-Un detalle: hardinfo2, pamac-aur, rustdesk-bin y archlinux-tweak-tool-gtk4 no están en los repos oficiales de Arch, así que dependen de Chaotic-AUR o de Kiro para instalarse.
+Aplicaciones instaladas desde otros repositorios: hardinfo2, pamac-aur, rustdesk-bin y archlinux-tweak-tool-gtk4 no están en los repos oficiales de Arch, así que dependen de Chaotic-AUR o de Kiro para instalarse.
 
 Atajos de teclado para lanzadores de aplicaciones: 
 
@@ -227,3 +227,56 @@ Mayor legibilidad de iconos: las variantes en escala de grises suelen distinguir
 Envejecen mejor: un tema de color vivo puede sentirse "pasado de moda" con el tiempo; el gris/monocromo tiende a mantenerse vigente más tiempo.
 
 Menor distracción: ideal para quienes usan mucho la terminal o software técnico (btop, hardinfo2, etc.), donde el color debería reservarse para resaltar información relevante, no para el propio sistema operativo.
+
+Aplicaciones instaladas 
+
+Escritorio GNOME (pacman)
+
+gnome-shell, gnome-tweaks, gdm, gnome-session, gnome-control-center, gnome-settings-daemon
+Nautilus, gnome-terminal-transparency, Alacritty, gnome-text-editor, gedit
+Utilidades: Calculadora, Calendario, Relojes, Mapas, Caracteres, Registros, Monitor del sistema, Discos, Visor de fuentes, Baobab, Conexiones, Boxes, Yelp, Snapshot, Decibels, Tecla
+Visores: Loupe (imágenes), Evince (PDF), Sushi (vista previa)
+Extras GNOME: gnome-browser-connector, gnome-shell-extensions, gnome-backgrounds, gnome-color-manager, gnome-keyring, gnome-remote-desktop, gnome-user-docs, gnome-user-share, dconf-editor, tracker3-miners, grilo-plugins, rygel
+
+Multimedia y productividad
+
+VLC (con todos los plugins), mpv
+OBS Studio, Audacity, Ardour, Kdenlive
+Firefox (es-AR), LibreOffice Fresh (es), hunspell-es_uy
+Telegram Desktop, Fragments (torrents)
+RustDesk
+
+Sistema y herramientas
+
+GParted, Ventoy, btop, fastfetch, hardinfo2, nano
+File Roller, unrar, p7zip, ntfs-3g, os-prober
+pamac-aur, archlinux-tweak-tool-gtk4, pacman-contrib
+amd-ucode, intel-ucode, xorg-xrandr
+base-devel, git, jq, unzip, curl
+gvfs (afc, goa, gphoto2, mtp, nfs, smb, dnssd, wsdd), xdg-desktop-portal, xdg-user-dirs-gtk
+
+Temas, iconos y fuentes
+
+Papirus, Mint-L, Mint-X, Mint-Y, Faenza
+ttf-firacode-nerd
+
+Extensiones desde pacman
+
+Dash to Dock, Arch Update
+
+AUR (vía yay)
+
+yay (se compila primero)
+Stacer, Sinergia DD Burner, IPTVnator, Yaru Colors Icon Theme (incluye Yaru-Grey), fetch-git, Gapless
+
+Extensiones desde extensions.gnome.org
+
+Magic Lamp Effect, Compiz Windows Effect, ArcMenu, Astra Monitor, Burn My Windows, Coverflow Alt-Tab, Dash2Dock Lite, Desktop Cube (activadas desde el inicio)
+
+Aplicaciones instaladas desde otros repositorios: hardinfo2, pamac-aur, rustdesk-bin y archlinux-tweak-tool-gtk4 no están en los repos oficiales, así que dependen de Chaotic-AUR o Kiro.
+
+Atajos de teclado para lanzadores de aplicaciones: 
+
+Menu de gnome o lanzador de aplicaciones con la telca super o tambien conocida como la tecla del "tio bill"
+
+Lanzador de aplicaciones Arc Menu con la combinacion de teclas Ctrl+Espacio
