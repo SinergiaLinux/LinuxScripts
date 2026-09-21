@@ -193,7 +193,7 @@ Stacer, Sinergia DD Burner, IPTVnator, Yaru Colors Icon Theme (incluye Yaru-Deep
 
 Extensiones desde extensions.gnome.org
 
-Magic Lamp Effect, Compiz Windows Effect, ArcMenu, Astra Monitor, Burn My Windows, Coverflow Alt-Tab, Dash2Dock Lite, Desktop Cube
+Magic Lamp Effect, Compiz Windows Effect, ArcMenu, Astra Monitor, Burn My Windows, Coverflow Alt-Tab, Dash2Dock Lite, Desktop Cube (activadas desde el inicio)
 
 Aplicaciones instaladas desde otros repositorios: hardinfo2, pamac-aur, rustdesk-bin y archlinux-tweak-tool-gtk4 no están en los repos oficiales de Arch, así que dependen de Chaotic-AUR o de Kiro para instalarse.
 
