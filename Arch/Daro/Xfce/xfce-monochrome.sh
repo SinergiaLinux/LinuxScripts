@@ -224,7 +224,6 @@ echo "==> Instalando paquetes AUR adicionales..."
 sudo -u "$REAL_USER" yay -S --needed --noconfirm \
   stacer-bin \
   sinergia-dd-burner \
-  aimp \
   iptvnator-bin \
   yaru-colors-icon-theme \
   fetch-git
