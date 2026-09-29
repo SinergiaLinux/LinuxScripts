@@ -121,7 +121,7 @@ sudo pacman -S --noconfirm --needed \
   python-gobject \
   dbus \
   lightdm \
-  lightdm-gtk-greeter \
+  lightdm-slick-greeter \
   pipewire-pulse \
   wireplumber \
   pavucontrol \
