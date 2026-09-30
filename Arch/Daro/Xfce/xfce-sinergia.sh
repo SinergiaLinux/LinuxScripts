@@ -173,6 +173,7 @@ sudo sed -i.bak 's/#\?\(GRUB_DISABLE_OS_PROBER=\).*/\1false/' /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # 6. Habilitar el gestor de inicio
+sudo sed -i 's/#\?greeter-session=.*/greeter-session=lightdm-slick-greeter/' /etc/lightdm/lightdm.conf
 sudo systemctl enable lightdm
 
 # ==========================================
