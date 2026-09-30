@@ -824,7 +824,7 @@ rm -rf "$HYBRID_EXTRACT_DIR" "$HYBRID_ZIP"
 # 10. CONFIGURACIÓN DE SYSTEM SERVICES Y GRUB
 # ==========================================
 echo "==> Configurando LightDM con GTK Greeter..."
-sudo sed -i 's/#\?greeter-session=.*/greeter-session=lightdm-gtk-greeter/' /etc/lightdm/lightdm.conf
+sudo sed -i 's/#\?greeter-session=.*/greeter-session=lightdm-slick-greeter/' /etc/lightdm/lightdm.conf
 sudo systemctl enable lightdm
 
 echo "==> Configurando GRUB para detectar otros SO..."
