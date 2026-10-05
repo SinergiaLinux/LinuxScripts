@@ -491,9 +491,9 @@ sudo chown -R "$REAL_USER:$REAL_USER" "$USER_HOME/.config"
 # ==========================================
 echo "==> Descargando el fondo de pantalla..."
 
-WALLPAPER_URL="https://raw.githubusercontent.com/f4dzN/archlinux-wallpapers/main/wallpapers/18.png"
+WALLPAPER_URL="https://raw.githubusercontent.com/f4dzN/archlinux-wallpapers/main/wallpapers/19.png"
 WALLPAPER_DIR="/usr/share/backgrounds/archlinux-wallpapers"
-WALLPAPER_FILE="$WALLPAPER_DIR/18.png"
+WALLPAPER_FILE="$WALLPAPER_DIR/19.png"
 
 # curl no viene en una instalación base de Arch por defecto; lo instalamos
 # si hace falta, sin tocar la lista grande de paquetes de la sección 4.
@@ -826,6 +826,20 @@ rm -rf "$HYBRID_EXTRACT_DIR" "$HYBRID_ZIP"
 echo "==> Configurando LightDM con GTK Greeter..."
 sudo sed -i 's/#\?greeter-session=.*/greeter-session=lightdm-slick-greeter/' /etc/lightdm/lightdm.conf
 sudo systemctl enable lightdm
+
+# Fondo del greeter de LightDM (slick-greeter): el mismo que el escritorio.
+if [ -f "$WALLPAPER_FILE" ]; then
+    echo "==> Configurando el fondo de LightDM: $WALLPAPER_FILE"
+    sudo tee /etc/lightdm/slick-greeter.conf > /dev/null << EOF
+[Greeter]
+background=$WALLPAPER_FILE
+draw-user-backgrounds=false
+theme-name=Graphite-Dark
+icon-theme-name=$ICON_THEME_NAME
+EOF
+else
+    echo "==> Advertencia: no existe $WALLPAPER_FILE; LightDM queda con su fondo por defecto."
+fi
 
 echo "==> Configurando GRUB para detectar otros SO..."
 if [ -f /etc/default/grub ]; then
