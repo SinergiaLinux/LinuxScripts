@@ -423,9 +423,9 @@ sudo chown -R "$REAL_USER:$REAL_USER" "$USER_HOME/.config"
 # ==========================================
 echo "==> Descargando el fondo de pantalla..."
 
-WALLPAPER_URL="https://raw.githubusercontent.com/f4dzN/archlinux-wallpapers/main/wallpapers/09.png"
+WALLPAPER_URL="https://raw.githubusercontent.com/f4dzN/archlinux-wallpapers/main/wallpapers/38.png"
 WALLPAPER_DIR="/usr/share/backgrounds/archlinux-wallpapers"
-WALLPAPER_FILE="$WALLPAPER_DIR/09.png"
+WALLPAPER_FILE="$WALLPAPER_DIR/38.png"
 
 # curl no viene en una instalación base de Arch por defecto; lo instalamos
 # si hace falta, sin tocar la lista grande de paquetes de la sección 4.
@@ -678,12 +678,78 @@ fi
 #     (city_id) y una API key de OpenWeatherMap ya cargadas por defecto
 #     del autor del tema; convendría reemplazarlas por las propias.
 
+
+# ==========================================
+# 9.1 ULAUNCHER: AUTOSTART Y TEMA OSCURO
+# ==========================================
+echo "==> Configurando Ulauncher (inicio automático y tema oscuro)..."
+
+setup_ulauncher() {
+    local TARGET_DIR="$1"   # carpeta .config
+    local USER_NAME="$2"
+    local SETTINGS="$TARGET_DIR/ulauncher/settings.json"
+
+    sudo mkdir -p "$TARGET_DIR/ulauncher" "$TARGET_DIR/autostart"
+
+    # Tema oscuro. Si ya hay un settings.json (script re-ejecutado o
+    # Ulauncher ya usado), solo se cambia el tema y se conserva el resto.
+    if sudo test -s "$SETTINGS" && sudo jq -e . "$SETTINGS" >/dev/null 2>&1; then
+        sudo jq '."theme-name" = "dark"' "$SETTINGS" | sudo tee "$SETTINGS.tmp" > /dev/null
+        sudo mv "$SETTINGS.tmp" "$SETTINGS"
+    else
+        sudo tee "$SETTINGS" > /dev/null << 'EOF'
+{
+    "theme-name": "dark",
+    "hotkey-show-app": "<Primary>space",
+    "show-indicator-icon": true,
+    "show-recent-apps": "0",
+    "clear-previous-query": true
+}
+EOF
+    fi
+
+    # Inicio automático en cada login, sin mostrar la ventana al arrancar.
+    sudo tee "$TARGET_DIR/autostart/ulauncher.desktop" > /dev/null << 'EOF'
+[Desktop Entry]
+Type=Application
+Name=Ulauncher
+Comment=Lanzador de aplicaciones
+Exec=env GDK_BACKEND=x11 /usr/bin/ulauncher --hide-window
+Icon=ulauncher
+Terminal=false
+Hidden=false
+X-GNOME-Autostart-enabled=true
+EOF
+
+    if [ "$USER_NAME" != "root" ]; then
+        sudo chown -R "$USER_NAME:$USER_NAME" "$TARGET_DIR/ulauncher" "$TARGET_DIR/autostart"
+    fi
+}
+
+setup_ulauncher "$USER_HOME/.config" "$REAL_USER"
+setup_ulauncher "/etc/skel/.config" "root"
+
+
 # ==========================================
 # 10. CONFIGURACIÓN DE SYSTEM SERVICES Y GRUB
 # ==========================================
 echo "==> Configurando LightDM con GTK Greeter..."
 sudo sed -i 's/#\?greeter-session=.*/greeter-session=lightdm-slick-greeter/' /etc/lightdm/lightdm.conf
 sudo systemctl enable lightdm
+
+# Fondo del greeter de LightDM (slick-greeter): el mismo que el escritorio.
+if [ -f "$WALLPAPER_FILE" ]; then
+    echo "==> Configurando el fondo de LightDM: $WALLPAPER_FILE"
+    sudo tee /etc/lightdm/slick-greeter.conf > /dev/null << EOF
+[Greeter]
+background=$WALLPAPER_FILE
+draw-user-backgrounds=false
+theme-name=Graphite-Dark
+icon-theme-name=$ICON_THEME_NAME
+EOF
+else
+    echo "==> Advertencia: no existe $WALLPAPER_FILE; LightDM queda con su fondo por defecto."
+fi
 
 echo "==> Configurando GRUB para detectar otros SO..."
 if [ -f /etc/default/grub ]; then
