@@ -191,7 +191,7 @@ ext_gset() {
 echo "==> Aplicando personalización de GNOME..."
 
 # 6.1 Descargar y aplicar fondo de escritorio segun la relación de aspecto detectada
-WALLPAPER_URL_169="https://raw.githubusercontent.com/f4dzN/archlinux-wallpapers/main/wallpapers/32.png"
+WALLPAPER_URL_169="https://raw.githubusercontent.com/f4dzN/archlinux-wallpapers/main/wallpapers/13.png"
 WALLPAPER_URL_219="https://raw.githubusercontent.com/UncleSpellbinder/Arch-Linux-HD-Wallpaper/main/ARCH_6__2560x1040.png"
 
 echo "==> Detectando resolución de pantalla..."
