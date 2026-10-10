@@ -215,6 +215,8 @@ fetch-git
 kiro-keyring, kiro-mirrorlist
 chaotic-keyring, chaotic-mirrorlist
 
+Lanzador de aplicaciones Ulauncher con la combinacion de teclas Control+Espacio
+
 
 ## XFCE MONOCROMATICO (xfce-monochrome.sh)
 
@@ -319,3 +321,5 @@ chaotic-keyring, chaotic-mirrorlist
 Íconos GreyStone: se descargan de Codeberg y se copian a /usr/share/icons.
 Tema Conky Hybrid: va embebido en el script y se instala a mano.
 Fondo de pantalla: se descarga de GitHub.
+
+Lanzador de aplicaciones Ulauncher con la combinacion de teclas Control+Espacio
