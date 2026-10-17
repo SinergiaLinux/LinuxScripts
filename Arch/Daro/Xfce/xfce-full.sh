@@ -50,41 +50,13 @@ sudo pacman -Sy
 
 
 # ==========================================
-# 2. CONFIGURACIÓN DEL REPOSITORIO NEMESIS_REPO (KIRO)
-# ==========================================
-echo "==> Configurando el repositorio nemesis_repo..."
-
-if ! grep -q "\[nemesis_repo\]" /etc/pacman.conf; then
-    echo "==> Agregando repositorio temporal nemesis_repo para bootstrap..."
-    sudo bash -c 'cat << EOF >> /etc/pacman.conf
-
-[nemesis_repo]
-Server = https://erikdubois.github.io/\$repo/\$arch
-EOF'
-fi
-
-sudo pacman -Sy
-
-echo "==> Importando clave PGP de Kiro (149ABD0C3A0563EE)..."
-sudo pacman-key --recv-keys 149ABD0C3A0563EE --keyserver keyserver.ubuntu.com || \
-sudo pacman-key --recv-keys 149ABD0C3A0563EE --keyserver keys.openpgp.org
-
-sudo pacman-key --lsign-key 149ABD0C3A0563EE
-
-echo "==> Instalando kiro-keyring y kiro-mirrorlist..."
-sudo pacman -Sy --needed kiro-keyring kiro-mirrorlist --noconfirm
-
-echo "==> Actualizando pacman.conf para usar kiro-mirrorlist..."
-sudo sed -i 's|Server = https://erikdubois.github.io/\$repo/\$arch|Include = /etc/pacman.d/kiro-mirrorlist|g' /etc/pacman.conf
-
-
-# ==========================================
-# 3. CONFIGURACIÓN DEL REPOSITORIO CHAOTIC-AUR
+# 2. CONFIGURACIÓN DEL REPOSITORIO CHAOTIC-AUR
 # ==========================================
 echo "==> Configurando el repositorio Chaotic-AUR..."
 
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com || \
-sudo pacman-key --recv-key 3056513887B78AEB --keyserver hkps://keyserver.ubuntu.com:443
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver hkps://keyserver.ubuntu.com:443 || \
+{ sleep 5; sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com; }
 sudo pacman-key --lsign-key 3056513887B78AEB
 
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' --noconfirm
@@ -101,6 +73,62 @@ fi
 
 echo "==> Actualizando la base de datos de repositorios..."
 sudo pacman -Sy
+
+# ==========================================
+# 3. CONFIGURACIÓN DEL REPOSITORIO NEMESIS_REPO (KIRO)
+# ==========================================
+
+echo "==> Configurando el repositorio nemesis_repo..."
+
+# Aseguramos que el keyring de pacman esté inicializado antes de importar claves
+sudo pacman-key --init 2>/dev/null || true
+
+if ! grep -q "\[nemesis_repo\]" /etc/pacman.conf; then
+    echo "==> Agregando repositorio temporal nemesis_repo para bootstrap..."
+    sudo bash -c 'cat << EOF >> /etc/pacman.conf
+
+[nemesis_repo]
+Server = https://erikdubois.github.io/\$repo/\$arch
+EOF'
+fi
+
+sudo pacman -Sy
+
+echo "==> Importando clave PGP de Kiro (149ABD0C3A0563EE)..."
+sudo pacman-key --recv-keys 149ABD0C3A0563EE --keyserver keyserver.ubuntu.com || \
+sudo pacman-key --recv-keys 149ABD0C3A0563EE --keyserver keys.openpgp.org || \
+{ sleep 5; sudo pacman-key --recv-keys 149ABD0C3A0563EE --keyserver keyserver.ubuntu.com; }
+
+sudo pacman-key --lsign-key 149ABD0C3A0563EE
+
+echo "==> Instalando kiro-keyring y kiro-mirrorlist..."
+sudo pacman -Sy --needed kiro-keyring kiro-mirrorlist --noconfirm
+
+echo "==> Actualizando pacman.conf para usar kiro-mirrorlist..."
+sudo sed -i 's|Server = https://erikdubois.github.io/\$repo/\$arch|Include = /etc/pacman.d/kiro-mirrorlist|g' /etc/pacman.conf
+
+
+# ==========================================
+# 3.1 CONFIGURACIÓN DEL REPOSITORIO SINERGIA
+# ==========================================
+echo "==> Configurando el repositorio sinergia..."
+
+# Importar la clave GPG del repositorio y firmarla localmente
+curl -fsSL https://Nacho-Telmo.github.io/sinergia-repo/x86_64/sinergia.gpg | sudo pacman-key --add -
+sudo pacman-key --lsign-key 4CBFA5A14BB153A7
+
+if ! grep -q "^\[sinergia\]" /etc/pacman.conf; then
+    echo "==> Agregando [sinergia] a pacman.conf..."
+    sudo bash -c 'cat << EOF >> /etc/pacman.conf
+
+[sinergia]
+Server = https://Nacho-Telmo.github.io/sinergia-repo/\$arch
+EOF'
+fi
+
+echo "==> Actualizando la base de datos de repositorios..."
+sudo pacman -Sy
+
 
 
 # ==========================================
@@ -188,6 +216,11 @@ sudo pacman -S --noconfirm --needed \
   arc-gtk-theme \
   colloid-gtk-theme-git \
   graphite-gtk-theme-black-normal-git \
+  sinergia-dd-burner \
+  sinergia-appimage-manager \
+  sinergia-reflector-top \
+  sinergia-keyring \
+  yay \
   os-prober
 
 # NOTA: xfce4-whiskermenu-plugin, xfce4-docklike-plugin y xfce4-windowck-plugin
@@ -203,20 +236,10 @@ sudo pacman -S --noconfirm --needed \
 echo "==> Asegurando base-devel e instalando YAY..."
 sudo pacman -S --needed base-devel git --noconfirm
 
-BUILD_DIR=$(mktemp -d)
-sudo chown -R "$REAL_USER:$REAL_USER" "$BUILD_DIR"
-
-sudo -u "$REAL_USER" bash -c "
-  git clone https://aur.archlinux.org/yay.git '$BUILD_DIR/yay'
-  cd '$BUILD_DIR/yay'
-  makepkg -si --noconfirm
-"
-rm -rf "$BUILD_DIR"
 
 echo "==> Instalando paquetes AUR adicionales..."
 sudo -u "$REAL_USER" yay -S --needed --noconfirm \
   stacer-bin \
-  sinergia-dd-burner \
   iptvnator-bin \
   yaru-colors-icon-theme \
   fetch-git
