@@ -135,7 +135,7 @@ sudo pacman -S ntfs-3g os-prober --noconfirm
 
 
 # ==========================================
-# 5. INSTALACIÓN DE YAY Y PAQUETES AUR
+# 5. INSTALACIÓN DE PAQUETES AUR
 # ==========================================
 echo "==> Asegurando base-devel e instalando YAY..."
 sudo pacman -S --needed base-devel git --noconfirm
