@@ -147,7 +147,7 @@ sudo pacman -S --needed base-devel git --noconfirm
 
 # Las extensiones de GNOME ya NO se instalan desde AUR (ver sección 5.1)
 echo "==> Instalando paquetes adicionales..."
-yay -S stacer-bin iptvnator-bin yaru-colors-icon-theme fetch-git gapless --noconfirm
+yay -S stacer-bin iptvnator-bin fetch-git gapless --noconfirm
 
 
 # ==========================================
@@ -210,6 +210,31 @@ ext_gset() {
 
 
 # ==========================================
+# 5.2 INSTALACIÓN DEL TEMA DE ICONOS CONFLUX
+# ==========================================
+echo "==> Instalando tema de iconos Conflux..."
+
+sudo pacman -S --needed git --noconfirm
+
+ICON_DIR="$HOME/.local/share/icons"
+mkdir -p "$ICON_DIR"
+
+if [ -d "$ICON_DIR/Conflux" ]; then
+    echo "==> Conflux ya existe, actualizando..."
+    git -C "$ICON_DIR/Conflux" pull --ff-only || true
+else
+    echo "==> Clonando Conflux desde GitHub..."
+    git clone --depth=1 https://github.com/MoshiurRahmanAdib/Conflux-Icon-Theme.git "$ICON_DIR/Conflux"
+fi
+
+# Fallback por si faltan iconos: hereda de Adwaita, Breeze e hicolor
+if [ -f "$ICON_DIR/Conflux/index.theme" ]; then
+    sed -i 's/^Inherits=.*/Inherits=Adwaita,breeze,hicolor/' "$ICON_DIR/Conflux/index.theme"
+    echo "==> Fallback de iconos configurado (Adwaita, Breeze, hicolor)."
+fi
+
+
+# ==========================================
 # 6. PERSONALIZACIÓN DE GNOME Y CONFIGURACIONES
 # ==========================================
 echo "==> Aplicando personalización de GNOME..."
@@ -249,8 +274,8 @@ gsettings set org.gnome.desktop.background picture-options 'zoom'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 
-# 6.3 Aplicar tema de íconos Yaru-Deepblue
-gsettings set org.gnome.desktop.interface icon-theme 'Yaru-Deepblue'
+# 6.3 Aplicar tema de íconos Conflux
+gsettings set org.gnome.desktop.interface icon-theme 'Conflux'
 
 # 6.4 Mostrar botones de Minimizar, Maximizar y Cerrar en las ventanas
 gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
@@ -336,7 +361,7 @@ picture-options=\"zoom\"
 [org/gnome/desktop/interface]
 color-scheme=\"prefer-dark\"
 accent-color=\"green\"
-icon-theme=\"Yaru-Deepblue\"
+icon-theme=\"Conflux\"
 
 [org/gnome/desktop/wm/preferences]
 button-layout=\"appmenu:minimize,maximize,close\"
@@ -388,13 +413,14 @@ echo "======================================================"
 echo " Instalación y configuración completadas con éxito."
 echo " Display manager configurado: GDM"
 echo " Entorno de escritorio: GNOME Shell"
+echo " Tema de iconos: Conflux"
 echo " Extensiones: Dash to Dock, Arc Menu, Burn My Windows,"
 echo "              Compiz Magic Lamp, Coverflow Alt-Tab,"
 echo "              Astra Monitor, Desktop Cube"
 echo " Áreas de trabajo: 4 (fijas)"
 echo " Terminal: Gnome Terminal"
 echo " Gestor de archivos: Nautilus"
-echo " Repositorios activos: kiro (nemesis_repo) + chaotic-aur"
+echo " Repositorios activos: kiro (nemesis_repo) + chaotic-aur + sinergia"
 echo "  
  SSSS   III   N   N  EEEEE  RRRR    GGG    III    AAA
 S        I    NN  N  E      R   R  G   G    I    A   A
