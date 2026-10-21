@@ -217,6 +217,7 @@ sudo pacman -S --noconfirm --needed \
   arc-gtk-theme \
   colloid-gtk-theme-git \
   graphite-gtk-theme-black-normal-git \
+  stacer-bin \
   sinergia-dd-burner \
   sinergia-appimage-manager \
   sinergia-reflector-top \
@@ -245,7 +246,7 @@ sudo pacman -S --needed base-devel git --noconfirm
 
 echo "==> Instalando paquetes AUR adicionales..."
 sudo -u "$REAL_USER" yay -S --needed --noconfirm \
-  stacer-bin \
+  
   iptvnator-bin \
   yaru-colors-icon-theme \
   fetch-git
