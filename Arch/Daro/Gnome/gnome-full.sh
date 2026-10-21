@@ -133,7 +133,7 @@ sudo pacman -Sy
 echo "==> Instalando entorno GNOME y aplicaciones..."
 sudo pacman -S gnome-shell gnome-tweaks --noconfirm
 
-sudo pacman -S gdm gnome-characters gnome-backgrounds gnome-calculator gnome-calendar gnome-clocks gnome-connections gnome-font-viewer gnome-logs gnome-maps gnome-remote-desktop gnome-color-manager gnome-control-center gnome-disk-utility gnome-keyring gnome-menus gnome-session gnome-settings-daemon gnome-shell-extensions gnome-system-monitor gnome-text-editor gnome-user-docs gnome-user-share gvfs-dnssd gvfs-wsdd loupe alacritty rygel sushi tecla tracker3-miners xdg-desktop-portal xdg-user-dirs-gtk yelp baobab evince grilo-plugins gvfs gvfs-afc gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb nautilus gnome-terminal-transparency pacman-contrib gnome-browser-connector amd-ucode intel-ucode vlc vlc-plugins-all fragments file-roller unrar p7zip firefox firefox-i18n-es-ar libreoffice-fresh-es hunspell-es_uy telegram-desktop fastfetch archlinux-tweak-tool-gtk4 gnome-shell-extension-arch-update gnome-shell-extension-dash-to-dock pamac-aur ttf-firacode-nerd gedit hardinfo2 gnome-boxes decibels snapshot gnome-font-viewer mpv obs-studio audacity ardour gparted kdenlive ventoy btop papirus-icon-theme nano dconf-editor mint-l-icons mint-x-icons mint-y-icons mate-icon-theme-faenza rustdesk-bin xorg-xrandr yay sinergia-dd-burner sinergia-appimage-manager sinergia-reflector-top sinergia-keyring --noconfirm
+sudo pacman -S gdm gnome-characters gnome-backgrounds gnome-calculator gnome-calendar gnome-clocks gnome-connections gnome-font-viewer gnome-logs gnome-maps gnome-remote-desktop gnome-color-manager gnome-control-center gnome-disk-utility gnome-keyring gnome-menus gnome-session gnome-settings-daemon gnome-shell-extensions gnome-system-monitor gnome-text-editor gnome-user-docs gnome-user-share gvfs-dnssd gvfs-wsdd loupe alacritty rygel sushi tecla tracker3-miners xdg-desktop-portal xdg-user-dirs-gtk yelp baobab evince grilo-plugins gvfs gvfs-afc gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb nautilus gnome-terminal-transparency pacman-contrib gnome-browser-connector amd-ucode intel-ucode vlc vlc-plugins-all fragments file-roller unrar p7zip firefox firefox-i18n-es-ar libreoffice-fresh-es hunspell-es_uy telegram-desktop fastfetch archlinux-tweak-tool-gtk4 gnome-shell-extension-arch-update gnome-shell-extension-dash-to-dock pamac-aur ttf-firacode-nerd gedit hardinfo2 gnome-boxes decibels snapshot gnome-font-viewer mpv obs-studio audacity ardour gparted kdenlive ventoy btop papirus-icon-theme nano dconf-editor mint-l-icons mint-x-icons mint-y-icons mate-icon-theme-faenza rustdesk-bin xorg-xrandr yay sinergia-dd-burner sinergia-appimage-manager sinergia-reflector-top stacer-bin sinergia-keyring --noconfirm
 
 sudo pacman -S ntfs-3g os-prober --noconfirm
 
@@ -147,7 +147,7 @@ sudo pacman -S --needed base-devel git --noconfirm
 
 # Las extensiones de GNOME ya NO se instalan desde AUR (ver sección 5.1)
 echo "==> Instalando paquetes adicionales..."
-yay -S stacer-bin iptvnator-bin fetch-git gapless --noconfirm
+yay -S iptvnator-bin fetch-git gapless --noconfirm
 
 
 # ==========================================
