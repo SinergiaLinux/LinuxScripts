@@ -174,21 +174,13 @@ sudo pacman -S --noconfirm --needed \
   kate \
   koko \
   yay \
+  stacer-bin \
   os-prober
 
 
-# ==========================================
-# 5. INSTALACIÓN DE PAQUETES AUR
-# ==========================================
 
-echo "==> Asegurando base-devel e instalando YAY..."
-sudo pacman -S --needed base-devel git --noconfirm
-
-
-echo "==> Instalando paquetes adicionales..."
-yay -S stacer-bin --noconfirm
 # ==========================================
-# 6. CONFIGURACIÓN DE SYSTEM SERVICES Y GRUB
+# 5. CONFIGURACIÓN DE SYSTEM SERVICES Y GRUB
 # ==========================================
 echo "==> Configurando sddm como display manager por defecto..."
 
@@ -209,7 +201,7 @@ if [ -f /etc/default/grub ]; then
 fi
 
 # ==========================================
-# 7. LIMPIEZA Y REINICIO
+# 6. LIMPIEZA Y REINICIO
 # ==========================================
 rm -rf "$USER_HOME/LinuxScripts"
 
