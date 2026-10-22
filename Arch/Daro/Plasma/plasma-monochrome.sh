@@ -188,6 +188,7 @@ sudo pacman -S --noconfirm --needed \
   gnome-boxes \
   koko \
   kate \
+  stacer-bin \
   sinergia-dd-burner \
   sinergia-appimage-manager \
   sinergia-reflector-top \
@@ -219,7 +220,7 @@ sudo pacman -S --needed base-devel git --noconfirm
 
 
 echo "==> Instalando paquetes adicionales..."
-yay -S stacer-bin  iptvnator-bin yamis-icon-theme-git fetch-git --noconfirm
+yay -S iptvnator-bin yamis-icon-theme-git fetch-git --noconfirm
 
 # ==========================================
 # 5.1 TEMA GLOBAL BREEZE DARK POR DEFECTO
