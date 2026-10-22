@@ -221,6 +221,7 @@ sudo pacman -S --noconfirm --needed \
   sinergia-reflector-top \
   sinergia-keyring \
   yay \
+  stacer-bin \
   os-prober
 
 # NOTA: xfce4-whiskermenu-plugin, xfce4-docklike-plugin y xfce4-windowck-plugin
@@ -239,7 +240,6 @@ sudo pacman -S --needed base-devel git --noconfirm
 
 echo "==> Instalando paquetes AUR adicionales..."
 sudo -u "$REAL_USER" yay -S --needed --noconfirm \
-  stacer-bin \
   iptvnator-bin \
   yaru-colors-icon-theme \
   fetch-git
