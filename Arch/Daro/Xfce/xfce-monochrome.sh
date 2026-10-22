@@ -246,7 +246,6 @@ sudo pacman -S --needed base-devel git --noconfirm
 
 echo "==> Instalando paquetes AUR adicionales..."
 sudo -u "$REAL_USER" yay -S --needed --noconfirm \
-  
   iptvnator-bin \
   yaru-colors-icon-theme \
   fetch-git
