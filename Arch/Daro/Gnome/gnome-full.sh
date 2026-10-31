@@ -109,7 +109,7 @@ sudo sed -i 's|Server = https://erikdubois.github.io/\$repo/\$arch|Include = /et
 echo "==> Configurando el repositorio sinergia..."
 
 # Importar la clave GPG del repositorio desde la firma del .db y firmarla localmente
-curl -s https://raw.githubusercontent.com/Nacho-Telmo/sinergia-repo/main/x86_64/sinergia[sinergia] \
+curl -s https://raw.githubusercontent.com/Nacho-Telmo/sinergia-repo/main/x86_64/sinergia.db.sig \
   | gpg --dearmor - 2>/dev/null \
   | sudo pacman-key --add - \
   && sudo pacman-key --lsign-key 4CBFA5A14BB153A7
@@ -120,13 +120,12 @@ if ! grep -q "^\[sinergia\]" /etc/pacman.conf; then
 
 [sinergia]
 SigLevel = Required DatabaseOptional
-Server = https://raw.githubusercontent.com/Nacho-Telmo/sinergia-repo/main/x86_64.db.sig
+Server = https://raw.githubusercontent.com/Nacho-Telmo/sinergia-repo/main/x86_64
 EOF'
 fi
 
 echo "==> Actualizando la base de datos de repositorios..."
 sudo pacman -Sy
-
 
 
 
