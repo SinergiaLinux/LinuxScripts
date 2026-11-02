@@ -102,6 +102,26 @@ echo "==> Actualizando pacman.conf para usar kiro-mirrorlist..."
 sudo sed -i 's|Server = https://erikdubois.github.io/\$repo/\$arch|Include = /etc/pacman.d/kiro-mirrorlist|g' /etc/pacman.conf
 
 
+# ==========================================
+# 3.1 CONFIGURACIÓN DEL REPOSITORIO SINERGIA
+# ==========================================
+echo "==> Configurando el repositorio sinergia..."
+
+# Importar la clave GPG del repositorio y firmarla localmente
+curl -fsSL https://nacho-telmo.github.io/sinergia-repo/x86_64/sinergia-key.asc | sudo pacman-key --add -
+sudo pacman-key --lsign-key 33986859CBA9A0329EE9321E1AA165CC95EBE1F1
+
+if ! grep -q "^\[sinergia\]" /etc/pacman.conf; then
+    echo "==> Agregando [sinergia] a pacman.conf..."
+    sudo bash -c 'cat << EOF >> /etc/pacman.conf
+
+[sinergia]
+Server = https://Nacho-Telmo.github.io/sinergia-repo/\$arch
+EOF'
+fi
+
+echo "==> Actualizando la base de datos de repositorios..."
+sudo pacman -Sy
 
 # ==========================================
 # 4. INSTALACIÓN DE PAQUETES DE PACMAN
