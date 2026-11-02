@@ -172,6 +172,7 @@ EGO_EXTENSIONS=(
     "CoverflowAltTab@palatis.blogspot.com"
     "dash2dock-lite@icedman.github.com"
     "desktop-cube@schneegans.github.com"
+    "tiling-assistant@leleat-on-github"
 )
 
 install_ego_extension() {
@@ -303,6 +304,7 @@ WANTED_EXTENSIONS=(
     "desktop-cube@schneegans.github.com"
     "arch-update@RaphaelRochet"
     "dash-to-dock@micxgx.gmail.com"
+    "tiling-assistant@leleat-on-github"
 )
 
 EXTENSIONS=()
@@ -415,7 +417,7 @@ echo " Entorno de escritorio: GNOME Shell"
 echo " Tema de iconos: Conflux"
 echo " Extensiones: Dash to Dock, Arc Menu, Burn My Windows,"
 echo "              Compiz Magic Lamp, Coverflow Alt-Tab,"
-echo "              Astra Monitor, Desktop Cube"
+echo "              Astra Monitor, Desktop Cube, Tiling Assistant"
 echo " Áreas de trabajo: 4 (fijas)"
 echo " Terminal: Gnome Terminal"
 echo " Gestor de archivos: Nautilus"
