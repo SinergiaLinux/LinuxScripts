@@ -216,9 +216,8 @@ sudo pacman -S --noconfirm --needed \
   arc-gtk-theme \
   colloid-gtk-theme-git \
   graphite-gtk-theme-black-normal-git \
-  sinergia-dd-burner \
+  sinergia-welcome \
   sinergia-appimage-manager \
-  sinergia-reflector-top \
   sinergia-keyring \
   yay \
   stacer-bin \
