@@ -243,6 +243,31 @@ sudo -u "$REAL_USER" yay -S --needed --noconfirm \
   yaru-colors-icon-theme \
   fetch-git
 
+  # ==========================================
+# 5.1 INSTALACIÓN DEL TEMA DE ICONOS CONFLUX
+# ==========================================
+echo "==> Instalando tema de iconos Conflux..."
+
+sudo pacman -S --needed git --noconfirm
+
+ICON_DIR="$HOME/.local/share/icons"
+mkdir -p "$ICON_DIR"
+
+if [ -d "$ICON_DIR/Conflux" ]; then
+    echo "==> Conflux ya existe, actualizando..."
+    git -C "$ICON_DIR/Conflux" pull --ff-only || true
+else
+    echo "==> Clonando Conflux desde GitHub..."
+    git clone --depth=1 https://github.com/MoshiurRahmanAdib/Conflux-Icon-Theme.git "$ICON_DIR/Conflux"
+fi
+
+# Fallback por si faltan iconos: hereda de Adwaita, Breeze e hicolor
+if [ -f "$ICON_DIR/Conflux/index.theme" ]; then
+    sed -i 's/^Inherits=.*/Inherits=Adwaita,breeze,hicolor/' "$ICON_DIR/Conflux/index.theme"
+    echo "==> Fallback de iconos configurado (Adwaita, Breeze, hicolor)."
+fi
+
+
 
 # ==========================================
 # 6. CONFIGURACIÓN DE APARIENCIA Y ENTORNO
